@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class StartWorld extends BaseWorld
 {
-
     /**
      * Constructor for objects of class StartWorld.
      * 
@@ -17,7 +16,7 @@ public class StartWorld extends BaseWorld
     {  
         startButton = new Button("Start", " ");
         addObject( startButton, 300, 200);  
-        
+
         twoStartButton = new Button("2 Players", "2");
         addObject(twoStartButton, 300, 250);
         
