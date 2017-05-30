@@ -15,16 +15,33 @@ public class EndWorld extends BaseWorld
      */
     public EndWorld(Integer score, Integer score2)
     {
+        HighScores highscores = new HighScores();
+        
+        highscores.load();
+        
+        highscores.addScore(score);
+         if (score2 != null) {
+            highscores.addScore(score2);
+        }
+
+        highscores.save();
+
         returnToStartButton = new Button("Return to Start", " ");
-        addObject( returnToStartButton, 300, 200);  
+        addObject( returnToStartButton, 300, 350);  
         
         
         Text messageText = new Text("Score:" + score.toString());
-        addObject( messageText, 300, 100);  
+        addObject( messageText, 300, 40);  
         
         if (score2 != null) {
             Text messageText2 = new Text("Score:" + score2.toString());
-            addObject( messageText2, 300, 120);
+            addObject( messageText2, 300, 60);
+        }
+        
+        int[] scores = highscores.getScores();
+        for (int i=0; i<scores.length; i++){
+            Text highscoreText = new Text(new Integer(i).toString() + ": " + new Integer(scores[i]).toString());
+            addObject( highscoreText, 300, 100+(i*20));
         }
     }
     

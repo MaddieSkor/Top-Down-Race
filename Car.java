@@ -57,6 +57,7 @@ public class Car extends Actor
             turn(1);
         } 
         move((int)speed);
+        this.score++;
 
         if (Greenfoot.isKeyDown("r")) {
             this.out = true;
