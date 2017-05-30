@@ -8,8 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameWorld extends BaseWorld
 {
+    boolean rightTrack;
+    boolean leftTrack;
+    boolean straightTrack;
+    
     int trackX = 100;
-    int trackY = 200;
+    int trackY = 180;
     int trackAngle = 0;
     int[] incArray = {0, 0, 3, 4, 7, 7, 9, 0};
     /**
@@ -27,6 +31,7 @@ public class GameWorld extends BaseWorld
             car2 = null;
         }
         
+        makeTrack();
     }
     
     public void act(){
@@ -43,7 +48,11 @@ public class GameWorld extends BaseWorld
     
     public void straight()
     {
-        for (int i = 0; i < 3; i++){
+        if (trackAngle == 360){
+            trackAngle = 0;
+        }
+        
+        for (int i = 0; i < 4; i++){
             if (trackAngle == 0){
                 trackY -= 20;
                 addObject(new Track(trackAngle), trackX, trackY);
@@ -65,6 +74,10 @@ public class GameWorld extends BaseWorld
     
     public void right()
     {
+        if (trackAngle == 360){
+            trackAngle = 0;
+        }
+        
         if (trackAngle == 0){
             trackY -= 20;
         }
@@ -102,6 +115,10 @@ public class GameWorld extends BaseWorld
     
     public void left()
     {
+        if (trackAngle == 360){
+            trackAngle = 0;
+        }
+        
         if (trackAngle == 0){
             trackY -= 20;
         }
@@ -135,6 +152,25 @@ public class GameWorld extends BaseWorld
             addObject(new Track(trackAngle - i*15), trackX, trackY);
         }
         trackAngle -= 90;
+    }
+    
+    public void makeTrack()
+    {
+        straight();
+        right();
+        right();
+        straight();
+        straight();
+        System.out.println(trackY);
+        if (trackY <= 100 || trackY >= 240){
+            straightTrack = false;
+        }
+        if (trackAngle == 0){
+            leftTrack = false;
+        }
+        if (trackAngle == 180){
+            rightTrack = false;
+        }
     }
     private Car car;
     private Car car2;

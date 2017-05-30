@@ -49,12 +49,12 @@ public class Car extends Actor
         //turn 
         if (Greenfoot.isKeyDown(this.leftKey)) {
             System.out.println("The "+ this.leftKey +" key was pressed");
-            turn(-1);
+            turn(-7);
         }
         
         if (Greenfoot.isKeyDown(this.rightKey)) {
             System.out.println("The "+ this.rightKey +" key was pressed");
-            turn(1);
+            turn(7);
         } 
         move((int)speed);
         this.score++;
