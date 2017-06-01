@@ -10,11 +10,15 @@ public class Track extends Actor
 {
     public Track(int rotation)
     {
-        GreenfootImage image = new GreenfootImage(80, 20);
-        image.setColor(Color.GRAY);
-        image.fill();
-        setImage(image);
+        setImage(new GreenfootImage("track.jpg"));
         setRotation(rotation);
+    }
+    
+    public Track(int rotation, boolean straight){
+        if (straight){
+            setImage(new GreenfootImage("straight track.jpg"));
+            setRotation(rotation);
+        }
     }
     
     /**

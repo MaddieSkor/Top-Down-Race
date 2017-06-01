@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameWorld extends BaseWorld
 {
-    boolean rightTrack;
-    boolean leftTrack;
-    boolean straightTrack;
+    boolean rightTrack = true;
+    boolean leftTrack = true;
+    boolean straightTrack = true;
     
     int trackX = 100;
     int trackY = 180;
@@ -22,6 +22,7 @@ public class GameWorld extends BaseWorld
      */
     public GameWorld(int numberOfPlayers)
     {    
+        makeTrack();
         car = new Car("w", "s", "a", "d");
         addObject(car, 300, 200);  
         if (numberOfPlayers == 2){
@@ -31,7 +32,7 @@ public class GameWorld extends BaseWorld
             car2 = null;
         }
         
-        makeTrack();
+        
     }
     
     public void act(){
@@ -55,19 +56,19 @@ public class GameWorld extends BaseWorld
         for (int i = 0; i < 4; i++){
             if (trackAngle == 0){
                 trackY -= 20;
-                addObject(new Track(trackAngle), trackX, trackY);
+                addObject(new Track(trackAngle, true), trackX, trackY);
             }
             else if (trackAngle == 90){
                 trackX += 20;
-                addObject(new Track(trackAngle), trackX, trackY);
+                addObject(new Track(trackAngle, true), trackX, trackY);
             }
             else if (trackAngle == 180){
                 trackY += 20;
-                addObject(new Track(trackAngle), trackX, trackY);
+                addObject(new Track(trackAngle, true), trackX, trackY);
             }
             else if (trackAngle == 270){
                 trackX -= 20;
-                addObject(new Track(trackAngle), trackX, trackY);
+                addObject(new Track(trackAngle, true), trackX, trackY);
             }
         }
     }
@@ -158,19 +159,97 @@ public class GameWorld extends BaseWorld
     {
         straight();
         right();
+        while (trackX < 450){
+            double randNum = Math.random();
+            if (trackY == 100 || trackY >= 240){
+                straightTrack = false;
+            }
+            if (trackAngle == 0 || trackY < 80){
+                leftTrack = false;
+            }
+            if (trackAngle == 180 || trackY >= 240){
+                rightTrack = false;
+            }
+            
+            if (!straightTrack){
+                if (!leftTrack){
+                    right();
+                }
+                else if (!rightTrack){
+                    left();
+                }
+                else{
+                    if (randNum > 0.5){
+                        left();
+                    }
+                        else{
+                        right();
+                    }
+                }
+            }
+            else if (!leftTrack){
+                if (!rightTrack){
+                    straight();
+                }
+                else if (!straightTrack){
+                    right();
+                }
+                else{
+                    if (randNum > 0.5){
+                        straight();
+                    }
+                        else{
+                        right();
+                    }
+                }
+            }
+            else if (!rightTrack){
+                if (!straightTrack){
+                    left();
+                }
+                else if (!leftTrack){
+                    straight();
+                }
+                else{
+                    if (randNum > 0.5){
+                        straight();
+                    }
+                        else{
+                        left();
+                    }
+                }
+            }
+            else if (straightTrack && leftTrack && rightTrack){
+                if (randNum < 1 && randNum >= (2.0/3)){
+                    right();
+                }
+                else if (randNum < (2.0/3) && randNum >= (1.0/3)){
+                    left();
+                }
+                else if (randNum < (1.0/3)){
+                    straight();
+                }
+            }
+            rightTrack = true;
+            leftTrack = true;
+            straightTrack = true;
+        }
+        endTrack();
+    }
+    
+    public void endTrack()
+    {
+        right();
+        while (trackY < 290){
+            straight();
+        }
+        right();
+        for (int i = 0; i < 4; i++){
+            straight();
+        }
         right();
         straight();
         straight();
-        System.out.println(trackY);
-        if (trackY <= 100 || trackY >= 240){
-            straightTrack = false;
-        }
-        if (trackAngle == 0){
-            leftTrack = false;
-        }
-        if (trackAngle == 180){
-            rightTrack = false;
-        }
     }
     private Car car;
     private Car car2;
