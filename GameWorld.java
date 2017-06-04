@@ -20,13 +20,17 @@ public class GameWorld extends BaseWorld
      * Constructor for objects of class GameWorld.
      * 
      */
-    public GameWorld(int numberOfPlayers)
+    public GameWorld(int numberOfPlayers, int carNumber)
     {    
         makeTrack();
-        car = new Car("w", "s", "a", "d");
-        addObject(car, 300, 200);  
+         if(numberOfPlayers == 1){
+            car = new Car("w", "s", "a", "d", carNumber);
+            addObject(car, 300, 200);
+        }
         if (numberOfPlayers == 2){
-            car2 = new Car("i", "k", "j", "l");
+            car = new Car("w", "s", "a", "d", 1);
+            addObject(car, 300, 200);
+            car2 = new Car("i", "k", "j", "l", 1);
             addObject(car2, 400, 200);
         } else {
             car2 = null;

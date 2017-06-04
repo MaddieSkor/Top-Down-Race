@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class StartWorld extends BaseWorld
 {
+    int carNumber = 1;
     /**
      * Constructor for objects of class StartWorld.
      * 
@@ -27,10 +28,10 @@ public class StartWorld extends BaseWorld
     public void act()
     {
         if (startButton.getClicked()) {
-            Greenfoot.setWorld(new GameWorld(1));
+            Greenfoot.setWorld(new GameWorld(1, carNumber));
         }
          if (twoStartButton.getClicked()) {
-            Greenfoot.setWorld(new GameWorld(2));
+            Greenfoot.setWorld(new GameWorld(2, carNumber));
         }  
     }
     

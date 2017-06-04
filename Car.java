@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Car extends Actor
 {
-      public Car(String forwardKey, String backKey, String leftKey, String rightKey)
+      public Car(String forwardKey, String backKey, String leftKey, String rightKey, int carNumber)
     {
         this.forwardKey = forwardKey;
         this.backKey = backKey;
@@ -17,7 +17,50 @@ public class Car extends Actor
         this.speed = 0.0;
         this.score = 0;
         this.out = false;
+        
+        //changes car image to match the car that was chosen at the store
+        if(carNumber == 1){
+            setImage("redcar.png");
+            getImage().scale(75, 40);
+        }
+        if(carNumber == 2){
+            setImage("bluecar.png");
+            getImage().scale(75, 40);
+        }
+        if(carNumber == 3){
+            setImage("greycar.png");
+            getImage().scale(75, 40);
+        }
+        if(carNumber == 4){
+            setImage("classyredcar.png");
+            getImage().scale(75, 40);
+        }
+        if(carNumber == 5){
+            setImage("herbie.png");
+            getImage().scale(75, 40);
+        }
+        if(carNumber == 6){
+            setImage("mysterymachine.png");
+            getImage().scale(85, 50);
+        }
+        if(carNumber == 7){
+            setImage("policecar.png");
+            getImage().scale(85, 90);
+        }
+        if(carNumber == 8){
+            setImage("taxi.png");
+            getImage().scale(75, 40);
+        }
+        if(carNumber == 9){
+            setImage("yellowcar.png");
+            getImage().scale(75, 25);
+        }
+        if(carNumber == 10){
+            setImage("whitecar.png");
+            getImage().scale(75, 40);
+        }
     }
+    
     /**
      * Act - do whatever the Car wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

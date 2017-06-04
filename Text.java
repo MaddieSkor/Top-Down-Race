@@ -21,4 +21,15 @@ public class Text extends Actor
             setImage(new GreenfootImage(this.text, 20, Color.WHITE, Color.BLACK));
         }
     }
+    
+    public void setText(String text, int sizeIn, boolean background) {
+        if (this.text != text) {
+            this.text = text;
+            if(background == false){
+                setImage(new GreenfootImage(this.text, sizeIn, Color.BLACK, new Color(0,0,0,0)));
+            }else if(background == true){
+                setImage(new GreenfootImage(this.text, sizeIn, Color.WHITE, Color.BLACK));
+            }
+        }
+    }
 }
