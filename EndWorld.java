@@ -29,6 +29,8 @@ public class EndWorld extends BaseWorld
         returnToStartButton = new Button("Return to Start", " ");
         addObject( returnToStartButton, 300, 350);  
         
+        Button returnToStoreButton = new Button("Go to the Store", " ");
+        addObject( returnToStoreButton, 300, 400);  
         
         Text messageText = new Text("Score:" + score.toString());
         addObject( messageText, 300, 40);  
@@ -48,7 +50,7 @@ public class EndWorld extends BaseWorld
     public void act()
     {
         if (returnToStartButton.getClicked()) {
-            Greenfoot.setWorld(new StartWorld());
+            Greenfoot.setWorld(new StartWorld(0));
         }
     }
     

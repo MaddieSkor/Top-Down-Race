@@ -8,11 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Text extends Actor
 {
-   	private String text;
+    private String text;
 
-	public Text(String text) {
+    public Text(String text) {
         setText(text);
-	}
+    }
+    
+    public Text(String text, int sizeIn, boolean background) {
+        setText(text, sizeIn, background);
+    }
 
     public void setText(String text) {
         if (this.text != text) {

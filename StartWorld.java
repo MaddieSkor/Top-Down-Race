@@ -25,14 +25,28 @@ public class StartWorld extends BaseWorld
         addObject( messageText, 300, 100);  
     }
     
+    public StartWorld(int carNumberIn)
+    {
+        carNumber = carNumberIn;
+        
+        startButton = new Button("Start", " ");
+        addObject( startButton, 300, 200);  
+
+        twoStartButton = new Button("2 Players", "2");
+        addObject(twoStartButton, 300, 250);
+        
+        Text messageText = new Text("The goal is to stay alive for as long as possible. Yes, the game will keep track :)");
+        addObject( messageText, 300, 100);  
+    }
+    
     public void act()
     {
         if (startButton.getClicked()) {
-            Greenfoot.setWorld(new GameWorld(1, carNumber));
+            Greenfoot.setWorld(new StoreWorld(0));
         }
          if (twoStartButton.getClicked()) {
             Greenfoot.setWorld(new GameWorld(2, carNumber));
-        }  
+        } 
     }
     
     private Button startButton;
