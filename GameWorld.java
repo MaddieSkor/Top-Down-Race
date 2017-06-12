@@ -1,4 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
+import java.util.Arrays;
+
 
 /**
  * Write a description of class GameWorld here.
@@ -15,7 +18,13 @@ public class GameWorld extends BaseWorld
     int trackX = 100;
     int trackY = 180;
     int trackAngle = 0;
+    int randNum;
     int[] incArray = {0, 0, 3, 4, 7, 7, 9, 0};
+    
+    double gameTime = 0;
+    double currentTime = 0;
+    ArrayList<int[]> trackCoords = new ArrayList<int[]>();
+    
     /**
      * Constructor for objects of class GameWorld.
      * 
@@ -40,6 +49,13 @@ public class GameWorld extends BaseWorld
     }
     
     public void act(){
+        gameTime++;
+        
+        if (gameTime - currentTime > 300){
+            randNum = Greenfoot.getRandomNumber(trackCoords.size());
+            
+        }
+        
         if (car2 == null) {
             if (car.isOut()){
                 Greenfoot.setWorld (new EndWorld(car.score, null));
@@ -254,6 +270,16 @@ public class GameWorld extends BaseWorld
         right();
         straight();
         straight();
+    }
+    
+    public void addCoords(int[] coordsIn)
+    {
+        trackCoords.add(coordsIn); 
+    }
+    
+    public ArrayList<int[]> getCoords()
+    {
+        return trackCoords;
     }
     private Car car;
     private Car car2;

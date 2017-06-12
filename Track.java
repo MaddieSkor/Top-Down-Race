@@ -8,13 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Track extends Actor
 {
+    int[] coords;
+    int test;
+    boolean generated = false;
+    GameWorld currentWorld;
     public Track(int rotation)
     {
+        coords = new int[2];
         setImage(new GreenfootImage("track.jpg"));
         setRotation(rotation);
     }
     
     public Track(int rotation, boolean straight){
+        coords = new int[2];
         if (straight){
             setImage(new GreenfootImage("straight track.jpg"));
             setRotation(rotation);
@@ -27,6 +33,12 @@ public class Track extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        if (!generated){
+            coords[0] = getX();
+            coords[1] = getY();
+            currentWorld = (GameWorld)getWorld();
+            currentWorld.addCoords(coords);
+            generated = true;
+        }
     }    
 }
