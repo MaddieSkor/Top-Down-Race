@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Car extends Actor
 {
-      public Car(String forwardKey, String backKey, String leftKey, String rightKey, int carNumber)
+    //Global Variables
+    int carNumber;
+    
+    public Car(String forwardKey, String backKey, String leftKey, String rightKey, int carNumber)
     {
         this.forwardKey = forwardKey;
         this.backKey = backKey;
@@ -21,43 +24,45 @@ public class Car extends Actor
         //changes car image to match the car that was chosen at the store
         if(carNumber == 1){
             setImage("redcar.png");
-            getImage().scale(75, 40);
+            getImage().scale(55, 25);
         }
         if(carNumber == 2){
             setImage("bluecar.png");
-            getImage().scale(75, 40);
+            getImage().scale(55, 25);
         }
         if(carNumber == 3){
             setImage("greycar.png");
-            getImage().scale(75, 40);
+            getImage().scale(55, 25);
         }
         if(carNumber == 4){
             setImage("classyredcar.png");
-            getImage().scale(75, 40);
+            getImage().scale(55, 25);
         }
         if(carNumber == 5){
             setImage("herbie.png");
-            getImage().scale(75, 40);
+            getImage().scale(55, 25);
+            Greenfoot.playSound("herbie.mp3");
         }
         if(carNumber == 6){
             setImage("mysterymachine.png");
-            getImage().scale(85, 50);
+            getImage().scale(65, 35);
         }
         if(carNumber == 7){
             setImage("policecar.png");
-            getImage().scale(85, 90);
+            getImage().scale(55, 60);
+            Greenfoot.playSound("siren.mp3");
         }
         if(carNumber == 8){
             setImage("taxi.png");
-            getImage().scale(75, 40);
+            getImage().scale(55, 25);
         }
         if(carNumber == 9){
             setImage("yellowcar.png");
-            getImage().scale(75, 25);
+            getImage().scale(45, 15);
         }
         if(carNumber == 10){
             setImage("whitecar.png");
-            getImage().scale(75, 40);
+            getImage().scale(50, 25);
         }
     }
     
@@ -69,9 +74,10 @@ public class Car extends Actor
     {
            super.act();
 
-        //move 
+        //move
         final double MAX_SPEED    = 3.0;
         final double SPEED_CHANGE = 0.1;
+
 
         if (Greenfoot.isKeyDown(this.forwardKey)) {
             System.out.println("The " + this.forwardKey + " key was pressed");

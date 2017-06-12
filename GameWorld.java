@@ -20,7 +20,7 @@ public class GameWorld extends BaseWorld
     int trackAngle = 0;
     int randNum;
     int[] incArray = {0, 0, 3, 4, 7, 7, 9, 0};
-    
+      
     double gameTime = 0;
     double currentTime = 0;
     ArrayList<int[]> trackCoords = new ArrayList<int[]>();
@@ -44,8 +44,6 @@ public class GameWorld extends BaseWorld
         } else {
             car2 = null;
         }
-        
-        
     }
     
     public void act(){
@@ -256,7 +254,6 @@ public class GameWorld extends BaseWorld
         }
         endTrack();
     }
-    
     public void endTrack()
     {
         right();
@@ -271,7 +268,7 @@ public class GameWorld extends BaseWorld
         straight();
         straight();
     }
-    
+     
     public void addCoords(int[] coordsIn)
     {
         trackCoords.add(coordsIn); 
