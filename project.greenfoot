@@ -1,12 +1,43 @@
 #Greenfoot properties
+<<<<<<< HEAD
 #Mon Jun 12 15:02:58 EDT 2017
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#Mon Jun 12 14:56:32 EDT 2017
+=======
+#Mon Jun 12 14:28:40 EDT 2017
+>>>>>>> origin/master
+=======
+#Mon Jun 12 14:28:40 EDT 2017
+>>>>>>> origin/master
+>>>>>>> origin/master
 editor.fx.0.height=739
 target2.width=80
 target8.name=Text
 target11.y=0
 target11.x=0
 dependency12.type=UsesDependency
+<<<<<<< HEAD
 dependency22.type=UsesDependency
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency22.type=UsesDependency
+target7.showInterface=false
+target1.type=ClassTarget
+mainWindow.height=744
+target6.typeParameters=
+dependency9.to=GameWorld
+target1.height=50
+target8.y=0
+dependency16.type=UsesDependency
+class.BaseWorld.superclass=greenfoot.World
+target8.x=0
+dependency21.to=EndWorld
+=======
+target1.type=ClassTarget
+>>>>>>> origin/master
 target7.showInterface=false
 target1.type=ClassTarget
 mainWindow.height=1056
@@ -17,12 +48,33 @@ target8.y=0
 dependency16.type=UsesDependency
 class.BaseWorld.superclass=greenfoot.World
 target8.x=0
+<<<<<<< HEAD
 dependency21.to=Track
+=======
+>>>>>>> origin/master
+=======
+target1.type=ClassTarget
+target7.showInterface=false
+mainWindow.height=1056
+target6.typeParameters=
+dependency9.to=Button
+target1.height=50
+dependency16.type=UsesDependency
+class.BaseWorld.superclass=greenfoot.World
+target8.y=0
+target8.x=0
+>>>>>>> origin/master
+>>>>>>> origin/master
 dependency2.type=UsesDependency
 target5.type=ClassTarget
 target6.y=0
 target6.x=0
+<<<<<<< HEAD
 dependency19.to=Car
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency19.to=Button
 target1.showInterface=false
 target4.y=0
 target4.x=0
@@ -31,10 +83,31 @@ dependency6.type=UsesDependency
 target9.type=ClassTarget
 target4.showInterface=false
 dependency20.from=GameWorld
+=======
+=======
+>>>>>>> origin/master
+dependency19.to=GameWorld
+>>>>>>> origin/master
+target1.showInterface=false
+target4.y=0
+target4.x=0
+dependency10.from=EndWorld
+dependency6.type=UsesDependency
+target9.type=ClassTarget
+<<<<<<< HEAD
+target4.showInterface=false
+dependency20.from=GameWorld
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 target2.y=0
 target2.x=0
 target10.type=ClassTarget
 target8.height=50
+<<<<<<< HEAD
 dependency10.to=StartWorld
 dependency14.from=StartWorld
 dependency18.from=GameWorld
@@ -42,21 +115,111 @@ target11.height=50
 target10.typeParameters=
 dependency4.from=Car
 dependency5.to=StartWorld
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency10.to=StartWorld
+dependency14.from=StartWorld
+dependency18.from=Text
+target11.height=50
+target10.typeParameters=
+dependency4.from=Car
+dependency5.to=StartWorld
+=======
+=======
+>>>>>>> origin/master
+dependency10.to=Text
+dependency14.from=Text
+dependency18.from=GameWorld
+target11.height=50
+target10.typeParameters=
+dependency4.from=EndWorld
+dependency5.to=Text
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 class.Button.image=rivets.jpg
 target1.name=HighScores
 target10.showInterface=false
 dependency8.from=EndWorld
+<<<<<<< HEAD
 dependency15.to=StoreWorld
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency15.to=GameWorld
+target4.typeParameters=
+class.EndWorld.image=bricks2.jpg
+target5.name=Car
+world.lastInstantiated=StartWorld
+mainWindow.width=1382
+=======
+=======
+>>>>>>> origin/master
+dependency15.to=Button
+class.EndWorld.image=bricks2.jpg
+>>>>>>> origin/master
 target4.typeParameters=
 class.EndWorld.image=bricks2.jpg
 target5.name=Car
 world.lastInstantiated=StartWorld
 mainWindow.width=1936
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
 readme.width=47
 class.Text.superclass=greenfoot.Actor
 target9.name=BaseWorld
 target5.height=50
+<<<<<<< HEAD
 dependency22.to=Obstacle
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency22.to=Track
+target10.name=GameWorld
+dependency13.type=UsesDependency
+target2.type=ClassTarget
+dependency1.to=Button
+dependency17.type=UsesDependency
+dependency3.type=UsesDependency
+target6.type=ClassTarget
+class.Car.superclass=greenfoot.Actor
+target2.height=50
+target2.typeParameters=
+class.GameWorld.superclass=BaseWorld
+dependency11.to=HighScores
+target9.typeParameters=
+dependency11.from=EndWorld
+class.HighScores.superclass=
+dependency7.type=UsesDependency
+dependency21.from=GameWorld
+target11.type=ClassTarget
+version=3.0.0
+editor.fx.0.y=22
+editor.fx.0.x=393
+dependency15.from=StartWorld
+dependency6.to=EndWorld
+target2.showInterface=false
+dependency1.from=StoreWorld
+mainWindow.y=-8
+target5.showInterface=false
+mainWindow.x=-8
+class.EndWorld.superclass=BaseWorld
+dependency19.from=GameWorld
+dependency16.to=StoreWorld
+target8.showInterface=false
+dependency5.from=Car
+target7.typeParameters=
+target2.name=Obstacle
+dependency9.from=EndWorld
+=======
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 target10.name=GameWorld
 dependency13.type=UsesDependency
 dependency23.type=UsesDependency
@@ -93,7 +256,15 @@ target8.showInterface=false
 dependency5.from=Car
 target7.typeParameters=
 target2.name=Obstacle
+<<<<<<< HEAD
 dependency9.from=EndWorld
+=======
+dependency9.from=StartWorld
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 class.Track.superclass=greenfoot.Actor
 readme.name=@README
 class.GameWorld.image=corkboard.jpg
@@ -102,19 +273,57 @@ target9.height=50
 dependency23.to=GameWorld
 dependency10.type=UsesDependency
 editor.fx.0.width=816
-class.StartWorld.image=board.jpg
+<<<<<<< HEAD
+<<<<<<< HEAD
+class.StartWorld.image=mainscreen.jpg
 target11.showInterface=false
 dependency20.type=UsesDependency
 target10.y=0
 target10.x=0
 dependency2.to=Text
+=======
+=======
+>>>>>>> origin/master
+class.StartWorld.image=board.jpg
+target11.showInterface=false
+dependency20.type=UsesDependency
+target10.y=0
+target10.x=0
+<<<<<<< HEAD
+dependency2.to=Text
+=======
+dependency2.to=StartWorld
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 target11.name=Track
 dependency14.type=UsesDependency
 target9.y=0
 target9.x=0
+<<<<<<< HEAD
 target6.height=50
 target3.type=ClassTarget
 dependency12.to=Button
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+target6.height=50
+target3.type=ClassTarget
+dependency12.to=StoreWorld
+class.StoreWorld.image=sandstone.jpg
+=======
+target3.type=ClassTarget
+target6.height=50
+dependency12.to=StoreWorld
+>>>>>>> origin/master
+=======
+target3.type=ClassTarget
+target6.height=50
+dependency12.to=StoreWorld
+>>>>>>> origin/master
+>>>>>>> origin/master
 target7.y=0
 target7.x=0
 dependency18.type=UsesDependency
@@ -127,18 +336,55 @@ target10.width=90
 target3.y=0
 target3.x=0
 target11.width=80
+<<<<<<< HEAD
 dependency7.to=Button
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency7.to=Button
+dependency12.from=EndWorld
+=======
+dependency7.to=StartWorld
+>>>>>>> origin/master
 dependency12.from=StartWorld
+>>>>>>> origin/master
+=======
+dependency7.to=StartWorld
+dependency12.from=StartWorld
+>>>>>>> origin/master
 target3.height=50
 dependency8.type=UsesDependency
 target1.y=0
 target1.x=0
+<<<<<<< HEAD
 dependency22.from=GameWorld
 target5.typeParameters=
 dependency17.to=Text
 dependency16.from=Text
 dependency2.from=StoreWorld
 dependency6.from=Car
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency22.from=GameWorld
+target5.typeParameters=
+dependency17.to=Button
+dependency16.from=StartWorld
+dependency2.from=StoreWorld
+dependency6.from=Car
+=======
+=======
+>>>>>>> origin/master
+target5.typeParameters=
+dependency17.to=EndWorld
+dependency16.from=GameWorld
+dependency2.from=Car
+dependency6.from=EndWorld
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 class.Car.image=car.png
 project.charset=UTF-8
 target3.showInterface=false
@@ -146,37 +392,112 @@ target3.name=StoreWorld
 target6.showInterface=false
 target3.typeParameters=
 target9.showInterface=false
+<<<<<<< HEAD
 dependency3.to=GameWorld
 target7.name=StartWorld
 dependency11.type=UsesDependency
 package.numDependencies=23
 dependency21.type=UsesDependency
 dependency13.to=Text
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency3.to=GameWorld
+target7.name=StartWorld
+dependency11.type=UsesDependency
+package.numDependencies=22
+dependency21.type=UsesDependency
+=======
+=======
+>>>>>>> origin/master
+dependency3.to=EndWorld
+target7.name=StartWorld
+dependency11.type=UsesDependency
+package.numDependencies=19
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+dependency13.to=Button
+>>>>>>> origin/master
 package.numTargets=11
 dependency15.type=UsesDependency
 class.Obstacle.image=bomb.png
 dependency1.type=UsesDependency
 target4.type=ClassTarget
 target8.width=80
+<<<<<<< HEAD
 dependency8.to=Text
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency8.to=Text
+=======
+dependency8.to=HighScores
+>>>>>>> origin/master
+=======
+dependency8.to=HighScores
+>>>>>>> origin/master
+>>>>>>> origin/master
 dependency19.type=UsesDependency
 simulation.speed=50
 target9.width=80
 target7.height=50
+<<<<<<< HEAD
 dependency20.to=EndWorld
 dependency5.type=UsesDependency
 target8.type=ClassTarget
 class.Button.superclass=Text
 dependency18.to=Button
 dependency13.from=StartWorld
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency20.to=Car
+dependency5.type=UsesDependency
+target8.type=ClassTarget
+class.Button.superclass=Text
+dependency18.to=Text
+dependency13.from=StartWorld
+=======
+=======
+>>>>>>> origin/master
+dependency5.type=UsesDependency
+target8.type=ClassTarget
+class.Button.superclass=Text
+dependency18.to=Track
+dependency13.from=Text
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 dependency9.type=UsesDependency
 target6.width=80
 dependency23.from=Track
 target10.height=50
 target7.width=80
+<<<<<<< HEAD
 dependency17.from=Text
 class.Obstacle.superclass=greenfoot.Actor
 dependency3.from=StoreWorld
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency17.from=Text
+class.Obstacle.superclass=greenfoot.Actor
+dependency3.from=StoreWorld
+=======
+dependency17.from=GameWorld
+class.Obstacle.superclass=greenfoot.Actor
+dependency3.from=Car
+>>>>>>> origin/master
+=======
+dependency17.from=GameWorld
+class.Obstacle.superclass=greenfoot.Actor
+dependency3.from=Car
+>>>>>>> origin/master
+>>>>>>> origin/master
 target1.typeParameters=
 class.StoreWorld.superclass=BaseWorld
 target3.width=80
@@ -184,9 +505,25 @@ target4.width=80
 target8.typeParameters=
 dependency7.from=EndWorld
 target5.width=80
+<<<<<<< HEAD
 dependency4.to=Text
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+dependency4.to=Text
+class.StartWorld.superclass=BaseWorld
+target4.name=Button
+=======
+dependency4.to=Button
 target4.name=Button
 class.StartWorld.superclass=BaseWorld
+>>>>>>> origin/master
+=======
+dependency4.to=Button
+>>>>>>> origin/master
+target4.name=Button
+class.StartWorld.superclass=BaseWorld
+>>>>>>> origin/master
 readme.y=10
 readme.x=10
 target4.height=50
