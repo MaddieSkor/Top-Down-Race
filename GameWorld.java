@@ -20,6 +20,7 @@ public class GameWorld extends BaseWorld
     int trackAngle = 0;
     int randNum;
     int[] incArray = {0, 0, 3, 4, 7, 7, 9, 0};
+    int[] trackInfo;
     
     double gameTime = 0;
     double currentTime = 0;
@@ -51,9 +52,19 @@ public class GameWorld extends BaseWorld
     public void act(){
         gameTime++;
         
-        if (gameTime - currentTime > 300){
+        if (gameTime - currentTime > 600){
             randNum = Greenfoot.getRandomNumber(trackCoords.size());
-            
+            trackInfo = trackCoords.get(randNum);
+            if (trackInfo[2] == 0 || trackInfo[2] == 180){
+                addObject(new Obstacle(), trackInfo[0] + Greenfoot.getRandomNumber(71)-35, trackInfo[1]);
+            }
+            else if (trackInfo[2] == 90 || trackInfo[2] == 270){
+                addObject(new Obstacle(), trackInfo[0], trackInfo[1] + Greenfoot.getRandomNumber(71)-35);
+            }
+            else{
+                addObject(new Obstacle(), trackInfo[0], trackInfo[1]);
+            }
+            currentTime = gameTime;
         }
         
         if (car2 == null) {

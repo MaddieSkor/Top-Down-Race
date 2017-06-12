@@ -59,6 +59,10 @@ public class Car extends Actor
             setImage("whitecar.png");
             getImage().scale(75, 40);
         }
+        
+        GreenfootImage currentImage = getImage();
+        currentImage.scale((int)(currentImage.getWidth()*0.5), (int)(currentImage.getHeight()*0.5));
+        setImage(currentImage);
     }
     
     /**
