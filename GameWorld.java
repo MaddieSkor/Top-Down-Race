@@ -55,6 +55,28 @@ public class GameWorld extends BaseWorld
         if (gameTime - currentTime > 600){
             randNum = Greenfoot.getRandomNumber(trackCoords.size());
             trackInfo = trackCoords.get(randNum);
+            
+            while (Math.abs(trackInfo[0] - car.getX()) < 70 && Math.abs(trackInfo[1] - car.getY()) < 70){
+                if (randNum < trackCoords.size() - 1){
+                    randNum++;
+                }
+                else{
+                    randNum = 0;
+                }
+                trackInfo = trackCoords.get(randNum);
+            }
+            if (car2 != null){
+                    while (Math.abs(trackInfo[0] - car2.getX()) < 70 && Math.abs(trackInfo[1] - car2.getY()) < 70){
+                    if (randNum < trackCoords.size() - 1){
+                        randNum++;
+                    }
+                    else{
+                        randNum = 0;
+                    }
+                    trackInfo = trackCoords.get(randNum);
+                }
+            }
+            
             if (trackInfo[2] == 0 || trackInfo[2] == 180){
                 addObject(new Obstacle(), trackInfo[0] + Greenfoot.getRandomNumber(71)-35, trackInfo[1]);
             }
@@ -64,6 +86,7 @@ public class GameWorld extends BaseWorld
             else{
                 addObject(new Obstacle(), trackInfo[0], trackInfo[1]);
             }
+            
             currentTime = gameTime;
         }
         
