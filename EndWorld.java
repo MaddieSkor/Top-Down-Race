@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EndWorld extends BaseWorld
 {
-
+    //Global Variables
+     private Button returnToStartButton;
+     private Button returnToStoreButton;
+     int score;
     /**
      * Constructor for objects of class EndWorld.
      * 
@@ -29,7 +32,7 @@ public class EndWorld extends BaseWorld
         returnToStartButton = new Button("Return to Start", " ");
         addObject( returnToStartButton, 300, 350);  
         
-        Button returnToStoreButton = new Button("Go to the Store", " ");
+        returnToStoreButton = new Button("Go to the Store", " ");
         addObject( returnToStoreButton, 300, 400);  
         
         Text messageText = new Text("Score:" + score.toString());
@@ -52,7 +55,8 @@ public class EndWorld extends BaseWorld
         if (returnToStartButton.getClicked()) {
             Greenfoot.setWorld(new StartWorld(0));
         }
+        if (returnToStoreButton.getClicked()) {
+            Greenfoot.setWorld(new StoreWorld(score));
+        }
     }
-    
-     private Button returnToStartButton;
 }
