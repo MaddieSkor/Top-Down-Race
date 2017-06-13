@@ -11,13 +11,17 @@ public class EndWorld extends BaseWorld
     //Global Variables
      private Button returnToStartButton;
      private Button returnToStoreButton;
-     int score;
+     public int score;
+     public int finalScore;
+     
     /**
      * Constructor for objects of class EndWorld.
      * 
      */
     public EndWorld(Integer score, Integer score2)
     {
+        finalScore = score;
+        
         HighScores highscores = new HighScores();
         
         highscores.load();
@@ -26,7 +30,6 @@ public class EndWorld extends BaseWorld
          if (score2 != null) {
             highscores.addScore(score2);
         }
-
         highscores.save();
 
         returnToStartButton = new Button("Return to Start", " ");
@@ -53,10 +56,10 @@ public class EndWorld extends BaseWorld
     public void act()
     {
         if (returnToStartButton.getClicked()) {
-            Greenfoot.setWorld(new StartWorld(0));
+            Greenfoot.setWorld(new StartWorld(finalScore));
         }
         if (returnToStoreButton.getClicked()) {
-            Greenfoot.setWorld(new StoreWorld(score));
+            Greenfoot.setWorld(new StoreWorld(finalScore));
         }
     }
 }

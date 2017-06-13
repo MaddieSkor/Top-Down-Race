@@ -1,13 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class StoreWorld here.
+ * In this world, the user has an option to use the points that they have earned in the game to purchase new cars with different features.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Maddy Thomson) 
  */
 public class StoreWorld extends BaseWorld
 {
+    //List of all buttons in this world
     public Button redCar;
     public Button blueCar;
     public Button greyCar;
@@ -18,6 +18,8 @@ public class StoreWorld extends BaseWorld
     public Button taxi;
     public Button yellowCar;
     public Button herbie;
+    
+    //Global Variables
     public int carNumber = 1;
     public int score;
     
@@ -28,21 +30,19 @@ public class StoreWorld extends BaseWorld
     public StoreWorld(int scoreIn)
     {
         score = scoreIn;
+        
         //welcome message
         Text messageText = new Text("Welcome to the Store!", 30, false);
         addObject( messageText, 300, 50);  
         Text messageText2 = new Text("Use your points to make purchases!",30, false);
         addObject( messageText2, 300, 75);  
         
-        //Display the players score
-        Text scoreText = new Text("Score: " + score + " Points", 25, false);
-        addObject(scoreText, 300, 425);  
-        
         //car option 1
         redCar = new Button("", "1", 1);
         addObject(redCar, 115, 150);
         Text costText = new Text("0 Points", 20, false);
         addObject(costText, 115, 200);
+        
         //car option 2
         blueCar = new Button("", "2", 2);
         addObject(blueCar, 215, 150);
@@ -64,7 +64,7 @@ public class StoreWorld extends BaseWorld
         addObject(classyRedCar, 415, 150);
         Text costText4 = new Text("30 Points", 20, false);
         addObject(costText4, 415, 200);  
-        Text featuresText3 = new Text("New Color", 15, false);
+        Text featuresText3 = new Text("Very Classy", 15, false);
         addObject(featuresText3, 415, 215);
         
         //car option 5
@@ -72,7 +72,7 @@ public class StoreWorld extends BaseWorld
         addObject(herbie, 515, 150);
         Text costText5 = new Text("40 Points", 20, false);
         addObject(costText5, 515, 200);  
-        Text featuresText4 = new Text("New Color", 15, false);
+        Text featuresText4 = new Text("Theme Song", 15, false);
         addObject(featuresText4, 515, 215);
         
         //car option 6
@@ -80,7 +80,7 @@ public class StoreWorld extends BaseWorld
         addObject(mysteryMachine, 115, 300);
         Text costText6 = new Text("50 Points", 20, false);
         addObject(costText6, 115, 350);
-        Text featuresText6 = new Text("New Color", 15, false);
+        Text featuresText6 = new Text("Lots of Fun", 15, false);
         addObject(featuresText6, 115, 365);
         
         //car option 7
@@ -116,11 +116,14 @@ public class StoreWorld extends BaseWorld
         addObject(costText10, 515, 350); 
         Text featuresText10 = new Text("Even Faster", 15, false);
         addObject(featuresText10, 515, 365);
+        
+        //Display the players score
+        Text scoreText = new Text("Score: " + score + " Points", 25, false);
+        addObject(scoreText, 300, 425);  
     }
     
     public void act(){
-        
-        //when a car is clicked, it send the user to the game world using the car that they chose
+        //when a car is clicked, it send the user to the game world using the car that they chose if they have enough points
         if(redCar.getClicked()){
                   Greenfoot.setWorld(new GameWorld(1, 1));
         }

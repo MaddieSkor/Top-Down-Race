@@ -18,10 +18,12 @@ public class GameWorld extends BaseWorld
     int trackX = 100;
     int trackY = 180;
     int trackAngle = 0;
+    int score;
     int randNum;
     int[] incArray = {0, 0, 3, 4, 7, 7, 9, 0};
+
     int[] trackInfo;
-    
+   
     double gameTime = 0;
     double currentTime = 0;
     ArrayList<int[]> trackCoords = new ArrayList<int[]>();
@@ -45,15 +47,16 @@ public class GameWorld extends BaseWorld
         } else {
             car2 = null;
         }
-        
-        
     }
     
     public void act(){
         gameTime++;
+        score = car.score;
+        showText("Score: " + score/90 + " Points", 300, 425);
         
-        if (gameTime - currentTime > 600){
+        if (gameTime - currentTime > 300){
             randNum = Greenfoot.getRandomNumber(trackCoords.size());
+            
             trackInfo = trackCoords.get(randNum);
             
             while (Math.abs(trackInfo[0] - car.getX()) < 70 && Math.abs(trackInfo[1] - car.getY()) < 70){
@@ -290,7 +293,6 @@ public class GameWorld extends BaseWorld
         }
         endTrack();
     }
-    
     public void endTrack()
     {
         right();
@@ -305,7 +307,7 @@ public class GameWorld extends BaseWorld
         straight();
         straight();
     }
-    
+     
     public void addCoords(int[] coordsIn)
     {
         trackCoords.add(coordsIn); 

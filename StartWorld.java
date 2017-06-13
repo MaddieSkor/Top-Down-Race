@@ -1,14 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class StartWorld here.
+ * This is the beginning screen for the game.  The user can select 1 or two players and is redirected to a new world depending on their selection.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Maddy Thomson) 
+ * @author (Madison Skorbinski) 
  */
 public class StartWorld extends BaseWorld
 {
+    //Lists all buttons used in this world
+    private Button startButton;
+    private Button twoStartButton;
+    
+    //Global Variables
     int score;
+    
     /**
      * Constructor for objects of class StartWorld.
      * 
@@ -61,14 +67,13 @@ public class StartWorld extends BaseWorld
     
     public void act()
     {
+        //If user selects "Start", they will be sent to the store
         if (startButton.getClicked()) {
             Greenfoot.setWorld(new StoreWorld(score));
         }
+        //If user selects "2 Players" they will be sent to the mutiplayer game
          if (twoStartButton.getClicked()) {
             Greenfoot.setWorld(new GameWorld(2, 1));
         } 
     }
-    
-    private Button startButton;
-    private Button twoStartButton;
 }
