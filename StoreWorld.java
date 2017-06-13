@@ -125,7 +125,7 @@ public class StoreWorld extends BaseWorld
     public void act(){
         //when a car is clicked, it send the user to the game world using the car that they chose if they have enough points
         if(redCar.getClicked()){
-                  Greenfoot.setWorld(new GameWorld(1, 1));
+                  Greenfoot.setWorld(new GameWorld(1, 5));
         }
         if(score >= 10){
             if(blueCar.getClicked()){

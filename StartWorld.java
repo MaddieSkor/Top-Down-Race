@@ -37,6 +37,8 @@ public class StartWorld extends BaseWorld
         
         twoStartButton = new Button("2 Players", "2");
         addObject(twoStartButton, 400, 300);
+        
+        setBackground(new GreenfootImage("sandstone.jpg"));
     }
     
     public StartWorld(int scoreIn)
@@ -59,6 +61,8 @@ public class StartWorld extends BaseWorld
         
         twoStartButton = new Button("2 Players", "2");
         addObject(twoStartButton, 400, 300);
+        
+        setBackground(new GreenfootImage("sandstone.jpg"));
     }
     
     public void act()

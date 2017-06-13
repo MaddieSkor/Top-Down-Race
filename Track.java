@@ -14,13 +14,13 @@ public class Track extends Actor
     GameWorld currentWorld;
     public Track(int rotation)
     {
-        coords = new int[2];
+        coords = new int[3];
         setImage(new GreenfootImage("track.jpg"));
         setRotation(rotation);
     }
     
     public Track(int rotation, boolean straight){
-        coords = new int[2];
+        coords = new int[3];
         if (straight){
             setImage(new GreenfootImage("straight track.jpg"));
             setRotation(rotation);
@@ -36,6 +36,7 @@ public class Track extends Actor
         if (!generated){
             coords[0] = getX();
             coords[1] = getY();
+            coords[2] = getRotation();
             currentWorld = (GameWorld)getWorld();
             currentWorld.addCoords(coords);
             generated = true;

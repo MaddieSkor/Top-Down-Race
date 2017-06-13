@@ -11,7 +11,7 @@ public class Obstacle extends Actor
     public Obstacle()
     {
         GreenfootImage currentImage = getImage();
-        currentImage.scale(30, 30);
+        currentImage.scale(20, 20);
         setImage(currentImage);
     }
     
