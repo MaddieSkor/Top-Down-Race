@@ -63,6 +63,7 @@ public class Car extends Actor
         GreenfootImage currentImage = getImage();
         currentImage.scale((int)(currentImage.getWidth()*0.5), (int)(currentImage.getHeight()*0.5));
         setImage(currentImage);
+        setRotation(-90);
     }
     
     /**
@@ -71,14 +72,14 @@ public class Car extends Actor
      */
     public void act() 
     {
-           super.act();
-
+        super.act();
+        
+        currentWorld = (GameWorld)getWorld();
         //move 
         final double MAX_SPEED    = 3.0;
         final double SPEED_CHANGE = 0.1;
 
         if (Greenfoot.isKeyDown(this.forwardKey)) {
-            System.out.println("The " + this.forwardKey + " key was pressed");
             speed += SPEED_CHANGE;
             if (speed > MAX_SPEED) {
                 speed = MAX_SPEED;
@@ -86,7 +87,6 @@ public class Car extends Actor
         }
 
         if (Greenfoot.isKeyDown(this.backKey)) {
-            System.out.println("The "+ this.backKey +" key was pressed");
             speed -= SPEED_CHANGE;
             if (speed < -MAX_SPEED) {
                 speed = -MAX_SPEED;
@@ -95,17 +95,33 @@ public class Car extends Actor
         
         //turn 
         if (Greenfoot.isKeyDown(this.leftKey)) {
-            System.out.println("The "+ this.leftKey +" key was pressed");
             turn(-7);
         }
         
         if (Greenfoot.isKeyDown(this.rightKey)) {
-            System.out.println("The "+ this.rightKey +" key was pressed");
             turn(7);
         } 
         move((int)speed);
         this.score++;
-
+        
+        if ((getOneIntersectingObject(Obstacle.class) != null || getOneIntersectingObject(Track.class) == null) && !destroyed){
+            destroyed = true;
+            currentTime = currentWorld.getTime();
+            rotation = getRotation();
+        }
+        if (destroyed){
+            imgWidth = getImage().getWidth();
+            GreenfootImage explosion = new GreenfootImage("explosion.png");
+            explosion.scale(imgWidth, imgWidth);
+            setImage(explosion);
+            speed = 0;
+            setRotation(rotation);
+            if (currentWorld.getTime() - currentTime > 30){
+                this.out = true;
+                currentWorld.removeObject(this);
+                destroyed = false;
+            }
+        }
         if (Greenfoot.isKeyDown("r")) {
             this.out = true;
         } 
@@ -113,11 +129,17 @@ public class Car extends Actor
     public  boolean isOut(){
         return this.out;
     }
+    GameWorld currentWorld;
+    public double currentTime;
+    public boolean destroyed = false;
+    public int i = 0;
+    public int rotation;
     private String forwardKey;
     private String backKey;
     private String leftKey;
     private String rightKey;
     private double speed;
+    public int imgWidth;
     public  int    score;
     private boolean out;
 }

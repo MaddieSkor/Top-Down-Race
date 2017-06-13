@@ -35,11 +35,11 @@ public class EndWorld extends BaseWorld
         returnToStoreButton = new Button("Go to the Store", " ");
         addObject( returnToStoreButton, 300, 400);  
         
-        Text messageText = new Text("Score:" + score.toString());
+        Text messageText = new Text("Player 1 Score:" + score.toString());
         addObject( messageText, 300, 40);  
         
         if (score2 != null) {
-            Text messageText2 = new Text("Score:" + score2.toString());
+            Text messageText2 = new Text("Player 2 Score:" + score2.toString());
             addObject( messageText2, 300, 60);
         }
         

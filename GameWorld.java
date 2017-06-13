@@ -35,13 +35,13 @@ public class GameWorld extends BaseWorld
         makeTrack();
          if(numberOfPlayers == 1){
             car = new Car("w", "s", "a", "d", carNumber);
-            addObject(car, 300, 200);
+            addObject(car, 100, 180);
         }
         if (numberOfPlayers == 2){
             car = new Car("w", "s", "a", "d", 1);
-            addObject(car, 300, 200);
+            addObject(car, 80, 180);
             car2 = new Car("i", "k", "j", "l", 1);
-            addObject(car2, 400, 200);
+            addObject(car2, 120, 180);
         } else {
             car2 = null;
         }
@@ -314,6 +314,11 @@ public class GameWorld extends BaseWorld
     public ArrayList<int[]> getCoords()
     {
         return trackCoords;
+    }
+    
+    public double getTime()
+    {
+        return gameTime;
     }
     private Car car;
     private Car car2;
