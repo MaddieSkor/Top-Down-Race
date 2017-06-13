@@ -72,7 +72,7 @@ public class StoreWorld extends BaseWorld
         addObject(herbie, 515, 150);
         Text costText5 = new Text("40 Points", 20, false);
         addObject(costText5, 515, 200);  
-        Text featuresText4 = new Text("New Color", 15, false);
+        Text featuresText4 = new Text("Theme Song", 15, false);
         addObject(featuresText4, 515, 215);
         
         //car option 6
@@ -80,7 +80,7 @@ public class StoreWorld extends BaseWorld
         addObject(mysteryMachine, 115, 300);
         Text costText6 = new Text("50 Points", 20, false);
         addObject(costText6, 115, 350);
-        Text featuresText6 = new Text("New Color", 15, false);
+        Text featuresText6 = new Text("Lots of Fun", 15, false);
         addObject(featuresText6, 115, 365);
         
         //car option 7
@@ -125,7 +125,7 @@ public class StoreWorld extends BaseWorld
     public void act(){
         //when a car is clicked, it send the user to the game world using the car that they chose if they have enough points
         if(redCar.getClicked()){
-                  Greenfoot.setWorld(new GameWorld(1, 5));
+                  Greenfoot.setWorld(new GameWorld(1, 1));
         }
         if(score >= 10){
             if(blueCar.getClicked()){
