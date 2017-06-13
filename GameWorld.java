@@ -18,6 +18,7 @@ public class GameWorld extends BaseWorld
     int trackX = 100;
     int trackY = 180;
     int trackAngle = 0;
+    int score;
     int randNum;
     int[] incArray = {0, 0, 3, 4, 7, 7, 9, 0};
       
@@ -48,10 +49,11 @@ public class GameWorld extends BaseWorld
     
     public void act(){
         gameTime++;
+        score = car.score;
+        showText("Score: " + score/280 + " Points", 300, 425);
         
         if (gameTime - currentTime > 300){
             randNum = Greenfoot.getRandomNumber(trackCoords.size());
-            
         }
         
         if (car2 == null) {

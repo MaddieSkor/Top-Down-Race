@@ -11,6 +11,14 @@ public class Car extends Actor
     //Global Variables
     int carNumber;
     
+    private String forwardKey;
+    private String backKey;
+    private String leftKey;
+    private String rightKey;
+    private double speed;
+    public  int    score;
+    private boolean out;
+    
     public Car(String forwardKey, String backKey, String leftKey, String rightKey, int carNumber)
     {
         this.forwardKey = forwardKey;
@@ -72,13 +80,14 @@ public class Car extends Actor
      */
     public void act() 
     {
-           super.act();
+        super.act();
 
         //move
         final double MAX_SPEED    = 3.0;
         final double SPEED_CHANGE = 0.1;
 
-
+        score = score + 1;
+        
         if (Greenfoot.isKeyDown(this.forwardKey)) {
             System.out.println("The " + this.forwardKey + " key was pressed");
             speed += SPEED_CHANGE;
@@ -106,8 +115,6 @@ public class Car extends Actor
             turn(7);
         } 
         move((int)speed);
-        this.score++;
-
         if (Greenfoot.isKeyDown("r")) {
             this.out = true;
         } 
@@ -115,11 +122,4 @@ public class Car extends Actor
     public  boolean isOut(){
         return this.out;
     }
-    private String forwardKey;
-    private String backKey;
-    private String leftKey;
-    private String rightKey;
-    private double speed;
-    public  int    score;
-    private boolean out;
 }

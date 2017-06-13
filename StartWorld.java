@@ -65,7 +65,7 @@ public class StartWorld extends BaseWorld
     {
         //If user selects "Start", they will be sent to the store
         if (startButton.getClicked()) {
-            Greenfoot.setWorld(new StoreWorld(100));
+            Greenfoot.setWorld(new StoreWorld(score));
         }
         //If user selects "2 Players" they will be sent to the mutiplayer game
          if (twoStartButton.getClicked()) {
