@@ -48,7 +48,7 @@ public class EndWorld extends BaseWorld
         
         int[] scores = highscores.getScores();
         for (int i=0; i<scores.length; i++){
-            Text highscoreText = new Text(new Integer(i).toString() + ": " + new Integer(scores[i]).toString());
+            Text highscoreText = new Text(new Integer(i+1).toString() + ": " + new Integer(scores[i]).toString());
             addObject( highscoreText, 300, 100+(i*20));
         }
     }

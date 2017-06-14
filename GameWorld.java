@@ -24,7 +24,7 @@ public class GameWorld extends BaseWorld
     int[] incArray = {0, 0, 3, 4, 7, 7, 9, 0};
 
     int[] trackInfo;
-   
+    int[] trackInfo2;
     double gameTime = 0;
     double currentTime = 0;
     ArrayList<int[]> trackCoords = new ArrayList<int[]>();
@@ -79,10 +79,17 @@ public class GameWorld extends BaseWorld
             }
         }
         
-        if (gameTime - currentTime > 300){
+        if (gameTime - currentTime > 500){
             randNum = Greenfoot.getRandomNumber(trackCoords.size());
             
             trackInfo = trackCoords.get(randNum);
+            if (randNum < trackCoords.size() - 10){
+                trackInfo2 = trackCoords.get(randNum + 10);
+            }
+            else{
+                trackInfo2 = trackCoords.get(0);
+            }
+            
             if (!car.isOut()){
                 while (Math.abs(trackInfo[0] - car.getX()) < 70 && Math.abs(trackInfo[1] - car.getY()) < 70){
                     if (randNum < trackCoords.size() - 1){
@@ -94,15 +101,17 @@ public class GameWorld extends BaseWorld
                     trackInfo = trackCoords.get(randNum);
                 }
             }
-            if (!car2.isOut()){
-                    while (Math.abs(trackInfo[0] - car2.getX()) < 70 && Math.abs(trackInfo[1] - car2.getY()) < 70){
-                    if (randNum < trackCoords.size() - 1){
-                        randNum++;
+            if (car2 != null){
+                if (!car2.isOut()){
+                        while (Math.abs(trackInfo[0] - car2.getX()) < 70 && Math.abs(trackInfo[1] - car2.getY()) < 70){
+                        if (randNum < trackCoords.size() - 1){
+                            randNum++;
+                        }
+                        else{
+                            randNum = 0;
+                        }
+                        trackInfo = trackCoords.get(randNum);
                     }
-                    else{
-                        randNum = 0;
-                    }
-                    trackInfo = trackCoords.get(randNum);
                 }
             }
             
@@ -115,17 +124,17 @@ public class GameWorld extends BaseWorld
             else{
                 addObject(new Obstacle(), trackInfo[0], trackInfo[1]);
             }
-            
+            addObject(new Powerup(), trackInfo2[0], trackInfo2[1]);
             currentTime = gameTime;
         }
         
         if (car2 == null) {
             if (car.isOut()){
-                Greenfoot.setWorld (new EndWorld(score1, null));
+                Greenfoot.setWorld (new EndWorld(score1/90, null));
             }
         } else {
               if (car.isOut() && car2.isOut()){
-                Greenfoot.setWorld (new EndWorld(score1, score2));
+                Greenfoot.setWorld (new EndWorld(score1/90, score2/90));
             }        
         } 
     }

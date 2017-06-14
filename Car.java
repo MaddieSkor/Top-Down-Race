@@ -122,9 +122,19 @@ public class Car extends Actor
                 destroyed = false;
             }
         }
+        
         if (Greenfoot.isKeyDown("r")) {
             this.out = true;
         } 
+        
+        if (getWorld() != null){
+            
+            if (getOneIntersectingObject(Powerup.class) != null){
+                Powerup powerup = (Powerup)getOneIntersectingObject(Powerup.class);
+                this.score += 90*powerup.getPoints();
+                powerup.remove();
+            }
+        }
     } 
     
     public  boolean isOut(){
