@@ -36,6 +36,8 @@ public class GameWorld extends BaseWorld
     public GameWorld(int numberOfPlayers, int carNumber)
     {    
         makeTrack();
+        score1 = 0;
+        score2 = 0;
          if(numberOfPlayers == 1){
             car = new Car("w", "s", "a", "d", carNumber);
             addObject(car, 100, 180);
@@ -55,27 +57,28 @@ public class GameWorld extends BaseWorld
         gameTime++;
         
         if (car2 == null){
-            score1 = car.score;
-            showText("Score: " + score1/90 + " Points", 300, 425);
+            score1 = car.score/60;
+            showText("Score: " + score1 + " Points", 300, 425);
+            System.out.println(score1);
         }
         else{
             if (car.isOut()){
-                score2 = car2.score;
+                score2 = car2.score/60;
                 showText("", 150, 425);
                 showText("", 450, 425);
-                showText("Player 2 Score: " + score2/90 + " Points", 300, 425);
+                showText("Player 2 Score: " + score2 + " Points", 300, 425);
             }
             else if (car2.isOut()){
-                score1 = car.score;
+                score1 = car.score/60;
                 showText("", 150, 425);
                 showText("", 450, 425);
-                showText("Player 1 Score: " + score1/90 + " Points", 300, 425);
+                showText("Player 1 Score: " + score1 + " Points", 300, 425);
             }
             else{
-                score1 = car.score;
-                score2 = car2.score;
-                showText("Player 1 Score: " + score1/90 + " Points", 150, 425);
-                showText("Player 2 Score: " + score2/90 + " Points", 450, 425);
+                score1 = car.score/60;
+                score2 = car2.score/60;
+                showText("Player 1 Score: " + score1 + " Points", 150, 425);
+                showText("Player 2 Score: " + score2 + " Points", 450, 425);
             }
         }
         
@@ -101,7 +104,11 @@ public class GameWorld extends BaseWorld
                     trackInfo = trackCoords.get(randNum);
                 }
             }
+<<<<<<< HEAD
             if (car2 != null){
+=======
+            if(car2 != null){
+>>>>>>> origin/master
                 if (!car2.isOut()){
                         while (Math.abs(trackInfo[0] - car2.getX()) < 70 && Math.abs(trackInfo[1] - car2.getY()) < 70){
                         if (randNum < trackCoords.size() - 1){
@@ -124,7 +131,11 @@ public class GameWorld extends BaseWorld
             else{
                 addObject(new Obstacle(), trackInfo[0], trackInfo[1]);
             }
+<<<<<<< HEAD
             addObject(new Powerup(), trackInfo2[0], trackInfo2[1]);
+=======
+       
+>>>>>>> origin/master
             currentTime = gameTime;
         }
         
