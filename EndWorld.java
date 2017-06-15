@@ -13,7 +13,7 @@ public class EndWorld extends BaseWorld
      private Button returnToStoreButton;
      public int score;
      public int finalScore;
-     public int finalScore2;
+     public boolean player2;
      
     /**
      * Constructor for objects of class EndWorld.
@@ -22,7 +22,11 @@ public class EndWorld extends BaseWorld
     public EndWorld(Integer score, Integer score2)
     {
         finalScore = score;
-        finalScore2 = score2;
+        if(score2 != null){
+            player2 = true;
+        }else{
+            player2 = false;
+        }
         HighScores highscores = new HighScores();
         
         highscores.load();
@@ -45,7 +49,7 @@ public class EndWorld extends BaseWorld
         addObject( messageText, 300, 40);  
         
         if (score2 != null) {
-            Text messageText2 = new Text("Player 2 Score: " + finalScore2);
+            Text messageText2 = new Text("Player 2 Score: " + score2);
             addObject( messageText2, 300, 60);
         }
         
@@ -61,7 +65,7 @@ public class EndWorld extends BaseWorld
         if (returnToStartButton.getClicked()) {
             Greenfoot.setWorld(new StartWorld(finalScore));
         }
-        if(finalScore2 == 0){
+        if(player2 == false){
             if (returnToStoreButton.getClicked()) {
                 Greenfoot.setWorld(new StoreWorld(finalScore));
             }

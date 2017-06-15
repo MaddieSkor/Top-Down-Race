@@ -118,7 +118,8 @@ public class GameWorld extends BaseWorld
                     }
                 }
             }
-                if (trackInfo[2] == 0 || trackInfo[2] == 180){
+               
+            if (trackInfo[2] == 0 || trackInfo[2] == 180){
                     addObject(new Obstacle(), trackInfo[0] + Greenfoot.getRandomNumber(71)-35, trackInfo[1]);
                 }
                 else if (trackInfo[2] == 90 || trackInfo[2] == 270){
