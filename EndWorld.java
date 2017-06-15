@@ -21,7 +21,6 @@ public class EndWorld extends BaseWorld
     public EndWorld(Integer score, Integer score2)
     {
         finalScore = score;
-        
         HighScores highscores = new HighScores();
         
         highscores.load();
@@ -51,6 +50,7 @@ public class EndWorld extends BaseWorld
             Text highscoreText = new Text(new Integer(i+1).toString() + ": " + new Integer(scores[i]).toString());
             addObject( highscoreText, 300, 100+(i*20));
         }
+        System.out.println(finalScore);
     }
     
     public void act()

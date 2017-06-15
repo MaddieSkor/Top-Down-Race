@@ -22,13 +22,13 @@ public class StartWorld extends BaseWorld
     public StartWorld()
     {  
         //Start Screen Text
-        Text messageText = new Text("Main Menu", 80, false);
+        Text messageText = new Text("Top Down Race", 80, false);
         addObject( messageText, 300, 75);  
         
-        Text messageText1 = new Text("The goal is to stay alive for as long as possible", 30, false);
+        Text messageText1 = new Text("Stay alive for as long as you can", 30, false);
         addObject( messageText1, 300, 150); 
         
-        Text messageText2 = new Text("Yes, the game will keep track :)", 30, false);
+        Text messageText2 = new Text("Can you beat the high score?", 30, false);
         addObject( messageText2, 300, 200);  
         
         //Single player and Mutiplayer buttons

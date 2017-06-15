@@ -14,10 +14,14 @@ public class Car extends Actor
         this.backKey = backKey;
         this.leftKey = leftKey;
         this.rightKey = rightKey;   
-        this.speed = 0.0;
+        this.speed = 1;
         this.score = 0;
         this.out = false;
         
+        accelerate = new GreenfootSound("accelerate.wav");
+        brake = new GreenfootSound("brake.wav");
+        explode = new GreenfootSound("Explosion.wav");
+        powerup = new GreenfootSound("Powerup.wav");
         //changes car image to match the car that was chosen at the store
         if(carNumber == 1){
             setImage("redcar.png");
@@ -76,20 +80,38 @@ public class Car extends Actor
         
         currentWorld = (GameWorld)getWorld();
         //move 
-        final double MAX_SPEED    = 3.0;
-        final double SPEED_CHANGE = 0.1;
+        final double MAX_SPEED    = 4.0;
+        final double SPEED_CHANGE = 0.05;
 
         if (Greenfoot.isKeyDown(this.forwardKey)) {
             speed += SPEED_CHANGE;
+            if (!accelerate.isPlaying()){
+                accelerate.play();
+            }
             if (speed > MAX_SPEED) {
                 speed = MAX_SPEED;
+                accelerate.stop();
+            }
+        }
+        else{
+            if (accelerate.isPlaying()){
+                accelerate.stop();
             }
         }
 
         if (Greenfoot.isKeyDown(this.backKey)) {
             speed -= SPEED_CHANGE;
-            if (speed < -MAX_SPEED) {
-                speed = -MAX_SPEED;
+            if (!brake.isPlaying()){
+                brake.play();
+            }
+            if (speed < 1) {
+                speed = 1;
+                brake.stop();
+            }
+        }
+        else{
+            if (brake.isPlaying()){
+                brake.stop();
             }
         }
         
@@ -101,14 +123,32 @@ public class Car extends Actor
         if (Greenfoot.isKeyDown(this.rightKey)) {
             turn(7);
         } 
+        if (!generated){
+            if (currentTime == -1){
+                currentTime = currentWorld.getTime();
+            }
+            if (currentWorld.getTime() - currentTime < 180){
+                speed = 0;
+                accelerate.stop();
+                brake.stop();
+            }
+            else{
+                generated = true;
+            }
+        }
         move((int)speed);
-        this.score++;
+        if (generated){
+            this.score++;
+        }
         
         if ((getOneIntersectingObject(Obstacle.class) != null || getOneIntersectingObject(Track.class) == null) && !destroyed){
             destroyed = true;
             currentTime = currentWorld.getTime();
             rotation = getRotation();
+            explode.play();
+            accelerate.setVolume(0);
         }
+        
         if (destroyed){
             imgWidth = getImage().getWidth();
             GreenfootImage explosion = new GreenfootImage("explosion.png");
@@ -118,6 +158,8 @@ public class Car extends Actor
             setRotation(rotation);
             if (currentWorld.getTime() - currentTime > 30){
                 this.out = true;
+                brake.stop();
+                accelerate.stop();
                 currentWorld.removeObject(this);
                 destroyed = false;
             }
@@ -128,8 +170,8 @@ public class Car extends Actor
         } 
         
         if (getWorld() != null){
-            
             if (getOneIntersectingObject(Powerup.class) != null){
+                powerup.play();
                 Powerup powerup = (Powerup)getOneIntersectingObject(Powerup.class);
                 this.score += 90*powerup.getPoints();
                 powerup.remove();
@@ -141,15 +183,20 @@ public class Car extends Actor
         return this.out;
     }
     GameWorld currentWorld;
-    public double currentTime;
+    public GreenfootSound explode;
+    public GreenfootSound powerup;
+    public GreenfootSound accelerate;
+    public GreenfootSound brake;
+    public double currentTime = -1;
     public boolean destroyed = false;
+    public boolean generated = false;
     public int i = 0;
     public int rotation;
     private String forwardKey;
     private String backKey;
     private String leftKey;
     private String rightKey;
-    private double speed;
+    private double speed = 1;
     public int imgWidth;
     public  int    score;
     private boolean out;
