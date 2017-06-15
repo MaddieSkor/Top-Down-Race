@@ -50,7 +50,6 @@ public class EndWorld extends BaseWorld
             Text highscoreText = new Text(new Integer(i+1).toString() + ": " + new Integer(scores[i]).toString());
             addObject( highscoreText, 300, 100+(i*20));
         }
-        System.out.println(finalScore);
     }
     
     public void act()
