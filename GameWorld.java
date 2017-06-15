@@ -59,6 +59,7 @@ public class GameWorld extends BaseWorld
         if (car2 == null){
             score1 = car.score/60;
             showText("Score: " + score1 + " Points", 300, 425);
+            System.out.println(score1);
         }
         else{
             if (car.isOut()){
@@ -103,9 +104,11 @@ public class GameWorld extends BaseWorld
                     trackInfo = trackCoords.get(randNum);
                 }
             }
-
+<<<<<<< HEAD
             if (car2 != null){
+=======
             if(car2 != null){
+>>>>>>> origin/master
                 if (!car2.isOut()){
                         while (Math.abs(trackInfo[0] - car2.getX()) < 70 && Math.abs(trackInfo[1] - car2.getY()) < 70){
                         if (randNum < trackCoords.size() - 1){
@@ -128,8 +131,11 @@ public class GameWorld extends BaseWorld
             else{
                 addObject(new Obstacle(), trackInfo[0], trackInfo[1]);
             }
+<<<<<<< HEAD
             addObject(new Powerup(), trackInfo2[0], trackInfo2[1]);
-
+=======
+       
+>>>>>>> origin/master
             currentTime = gameTime;
         }
         
@@ -143,7 +149,7 @@ public class GameWorld extends BaseWorld
             }        
         } 
     }
-}
+    
     public void straight()
     {
         if (trackAngle == 360){
