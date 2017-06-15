@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * In this world, the user has an option to use the points that they have earned in the game to purchase new cars with different features.
+ * In this world, the user has an option to use the points that they have earned in the game to purchase new cars.
  * 
  * @author (Maddy Thomson) 
  */
@@ -29,6 +29,7 @@ public class StoreWorld extends BaseWorld
      */
     public StoreWorld(int scoreIn)
     {
+        //set the score equal to the input value
         score = scoreIn;
         
         //welcome message
