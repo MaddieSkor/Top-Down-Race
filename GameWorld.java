@@ -38,9 +38,11 @@ public class GameWorld extends BaseWorld
      */
     public GameWorld(int numberOfPlayers, int carNumber)
     {    
+        //generates track
         makeTrack();
         score1 = 0;
         score2 = 0;
+        //generates cars based on number of players
          if(numberOfPlayers == 1){
             car = new Car("w", "s", "a", "d", carNumber);
             addObject(car, 100, 180);
@@ -61,7 +63,7 @@ public class GameWorld extends BaseWorld
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
-
+        //displays countdown timer at beginning of game
         gameTime++;
         if (gameTime < 60){
             showText("3", 300, 225);
@@ -75,7 +77,7 @@ public class GameWorld extends BaseWorld
         else{
             showText("", 300, 225);
         }
-        
+        //adds and displays score for all players on screen
         if (car2 == null){
             score1 = car.score/60;
             showText("Score: " + score1 + " Points", 300, 425);
@@ -100,11 +102,12 @@ public class GameWorld extends BaseWorld
                 showText("Player 2 Score: " + score2 + " Points", 450, 425);
             }
         }
-            
+        //every 8 seconds or so, spawns an obstacle and a powerup
         if (gameTime - currentTime > 500){
             randNum = Greenfoot.getRandomNumber(trackCoords.size());
             
             trackInfo = trackCoords.get(randNum);
+            //ensures the powerup doesn't spawn on top of an obstacle
             if (randNum < trackCoords.size() - 10){
                 trackInfo2 = trackCoords.get(randNum + 10);
             }
@@ -112,7 +115,7 @@ public class GameWorld extends BaseWorld
             else{
                 trackInfo2 = trackCoords.get(0);
             }
-            
+            //ensures the obstacle doesn;t spawn on top of a car
             if (!car.isOut()){
                 while (Math.abs(trackInfo[0] - car.getX()) < 70 && Math.abs(trackInfo[1] - car.getY()) < 70){
 
@@ -139,7 +142,7 @@ public class GameWorld extends BaseWorld
                 }
             }
             
-               
+            //deploys an obstacle on a chosen track piece, and slides it along said piece so that not all obstacles are in the middle
             if (trackInfo[2] == 0 || trackInfo[2] == 180){
                     addObject(new Obstacle(), trackInfo[0] + Greenfoot.getRandomNumber(71)-35, trackInfo[1]);
             }
@@ -153,7 +156,7 @@ public class GameWorld extends BaseWorld
     
             currentTime = gameTime;
         }
-    
+        //if the cars are destroyed, go to end screen
         if (car2 == null) {
             if (car.isOut()){
                 Greenfoot.setWorld (new EndWorld(score1, null));
@@ -167,12 +170,15 @@ public class GameWorld extends BaseWorld
         
     }
     
+    /**
+     * Generates a straight section of track
+     */
     public void straight()
     {
         if (trackAngle == 360){
             trackAngle = 0;
         }
-        
+        //generates 4 track pieces in a line
         for (int i = 0; i < 4; i++){
             if (trackAngle == 0){
                 trackY -= 20;
@@ -193,12 +199,15 @@ public class GameWorld extends BaseWorld
         }
     }
     
+    /**
+     * Generates a right turn in the track
+     */
     public void right()
     {
         if (trackAngle == 360){
             trackAngle = 0;
         }
-        
+
         if (trackAngle == 0){
             trackY -= 20;
         }
@@ -211,7 +220,7 @@ public class GameWorld extends BaseWorld
         else if (trackAngle == 270){
             trackX -= 20;
         }
-        
+        //generates a right turn in the track
         for (int i = 0; i < 7; i++){
             if (trackAngle == 0){
                 trackX += incArray[i];
@@ -234,6 +243,9 @@ public class GameWorld extends BaseWorld
         trackAngle += 90;
     }
     
+    /**
+     * Generates a left turn in the track
+     */
     public void left()
     {
         if (trackAngle == 360){
@@ -252,7 +264,7 @@ public class GameWorld extends BaseWorld
         else if (trackAngle == 270){
             trackX -= 20;
         }
-        
+        //generates a left turn in the track
         for (int i = 0; i < 7; i++){
             if (trackAngle == 0){
                 trackX -= incArray[i];
@@ -275,10 +287,14 @@ public class GameWorld extends BaseWorld
         trackAngle -= 90;
     }
     
+    /**
+     * Randomly generates a track
+     */
     public void makeTrack()
     {
         straight();
         right();
+        //checks certain aspects of where the track is being placed to determine what track pieces are viable
         while (trackX < 450){
             double randNum = Math.random();
             if (trackY == 100 || trackY >= 240){
@@ -357,8 +373,12 @@ public class GameWorld extends BaseWorld
         endTrack();
     }
     
+    /**
+     * Returns the track to the beginning after being generated
+     */
     public void endTrack()
     {
+        //turns the track down and back around to the beginning
         right();
         while (trackY < 290){
             straight();
@@ -371,21 +391,32 @@ public class GameWorld extends BaseWorld
         straight();
         straight();
     }
-     
+    
+    /**
+     * Adds an array of coordinates to the list of coordinate arrays
+     * @param coordsIn The coordinates to be added
+     */
     public void addCoords(int[] coordsIn)
     {
         trackCoords.add(coordsIn); 
     }
     
+    /**
+     * @return the list of coordinates in use by the GameWorld
+     */
     public ArrayList<int[]> getCoords()
     {
         return trackCoords;
     }
     
+    /**
+     * @return the current game time
+     */
     public double getTime()
     {
         return gameTime;
     }
+    //variable declaration
     private Car car;
     private Car car2;
 }
