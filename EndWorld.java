@@ -3,8 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class EndWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Maddy Thompson
+ * @author Madison Skorbinsky
+ * @version 1.0
  */
 public class EndWorld extends BaseWorld
 {

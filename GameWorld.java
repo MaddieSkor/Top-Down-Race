@@ -6,8 +6,9 @@ import java.util.Arrays;
 /**
  * Write a description of class GameWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Connor Brunt
+ * @author Madison Skorbinsky
+ * @version 1.0
  */
 public class GameWorld extends BaseWorld
 {

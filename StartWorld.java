@@ -3,8 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * This is the beginning screen for the game.  The user can select 1 or two players and is redirected to a new world depending on their selection.
  * 
- * @author (Maddy Thomson) 
- * @author (Madison Skorbinski) 
+ * @author Maddy Thomson 
+ * @author Madison Skorbinski 
+ * @version 1.0
  */
 public class StartWorld extends BaseWorld
 {

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=StartWorld
-comment0.text=\r\n\ This\ is\ the\ beginning\ screen\ for\ the\ game.\ \ The\ user\ can\ select\ 1\ or\ two\ players\ and\ is\ redirected\ to\ a\ new\ world\ depending\ on\ their\ selection.\r\n\ \r\n\ @author\ (Maddy\ Thomson)\ \r\n\ @author\ (Madison\ Skorbinski)\ \r\n
+comment0.text=\r\n\ This\ is\ the\ beginning\ screen\ for\ the\ game.\ \ The\ user\ can\ select\ 1\ or\ two\ players\ and\ is\ redirected\ to\ a\ new\ world\ depending\ on\ their\ selection.\r\n\ \r\n\ @author\ Maddy\ Thomson\ \r\n\ @author\ Madison\ Skorbinski\ \r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=StartWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ StartWorld.\r\n\ \r\n

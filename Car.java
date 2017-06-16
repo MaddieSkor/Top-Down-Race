@@ -3,7 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Car here.
  * 
- * @author Madison Skorbinski, Connor Brunt, Madeline Thompson
+ * @author Madison Skorbinski
+ * @author Connor Brunt
+ * @author Maddy Thompson
  * @version 1.0
  */
 public class Car extends Actor
