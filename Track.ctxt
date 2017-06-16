@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=Track
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ track\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Track\ segments\ that\ are\ put\ together\ to\ make\ the\ racetrack.\r\n\ \r\n\ @author\ Connor\ Brunt\ \r\n\ @version\ 1.0\r\n
 comment1.params=rotation
 comment1.target=Track(int)
+comment1.text=\r\n\ Generates\ a\ track\ piece\ with\ a\ specified\ rotation\r\n\ @param\ rotation\ the\ rotation\ of\ the\ track\ in\ degrees\ (horizontal\ is\ 0,\ increases\ clockwise)\r\n
 comment2.params=rotation\ straight
 comment2.target=Track(int,\ boolean)
+comment2.text=\r\n\ Generates\ a\ track\ piece\ with\ a\ specified\ rotation,\ and\ if\ it\ is\ straight,\ adds\ black\ bars\ on\ wither\ side\r\n\ @param\ rotation\ the\ rotation\ of\ the\ track\ in\ degrees\ (horizontal\ is\ 0,\ increases\ clockwise)\r\n\ @param\ straight\ whether\ or\ not\ the\ track\ is\ straight\r\n
 comment3.params=
 comment3.target=void\ act()
 comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ track\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
