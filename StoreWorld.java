@@ -26,7 +26,7 @@ public class StoreWorld extends BaseWorld
     
     /**
      * Constructor for objects of class StoreWorld.
-     * 
+     * @param score from the previous round, used to make purchases
      */
     public StoreWorld(int scoreIn)
     {
