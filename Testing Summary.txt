@@ -1,0 +1,13 @@
+Testing Summary:
+
+While many, many different quick test were performed throughout the development process, the following are the main test cases we used at the end
+
+1. 1 Player, hits a bomb and dies
+2. 1 Player, goes off track and dies
+3. 1 Player, collects a powerup then hits a bomb and dies
+4. 2 Player, see above scenarios
+5. 1 Player buys a new car after earning enough points
+6. 1 Player goes back to start screen then tries to buy a new car
+7. 2 player but then user goes back to one player to buy a car
+
+Based on the success of these test cases and a thorough look-through of our code, we determined that our game was working properly and without bugs
