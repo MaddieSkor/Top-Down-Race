@@ -104,6 +104,10 @@ public class StoreWorld extends BaseWorld
         addObject(scoreText, 300, 425);  
     }
     
+    /**
+     * Act - do whatever the StoreWorld wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act(){
         //when a car is clicked, it send the user to the game world using the car that they chose if they have enough points
         if(redCar.getClicked()){

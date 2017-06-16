@@ -35,7 +35,7 @@ public class Text extends Actor
      * @param text string for text to be set to
      */
     public void setText(String text) {
-        
+        //if the text isn't already set, set it to the specified string
         if (this.text != text) {
             this.text = text;
 

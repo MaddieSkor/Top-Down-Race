@@ -12,6 +12,7 @@ import java.util.Arrays;
  */
 public class GameWorld extends BaseWorld
 {
+    //variable declaration
     boolean rightTrack = true;
     boolean leftTrack = true;
     boolean straightTrack = true;
@@ -32,7 +33,8 @@ public class GameWorld extends BaseWorld
     
     /**
      * Constructor for objects of class GameWorld.
-     * 
+     * @param numberOfPlayers the number of palyers in the game
+     * @param carNumber the car type to be used for the cars in the game
      */
     public GameWorld(int numberOfPlayers, int carNumber)
     {    
@@ -54,6 +56,10 @@ public class GameWorld extends BaseWorld
         }
     }
     
+    /**
+     * Act - do whatever the GameWorld wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act(){
 
         gameTime++;

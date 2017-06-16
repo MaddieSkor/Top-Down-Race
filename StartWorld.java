@@ -42,6 +42,10 @@ public class StartWorld extends BaseWorld
         setBackground(new GreenfootImage("sandstone.jpg"));
     }
     
+    /**
+     * Constructor for StartWorld
+     * @param scoreIn score to be carried through to store screen
+     */
     public StartWorld(int scoreIn)
     {   
         score = scoreIn;
@@ -66,6 +70,10 @@ public class StartWorld extends BaseWorld
         setBackground(new GreenfootImage("sandstone.jpg"));
     }
     
+    /**
+     * Act - do whatever the StartWorld wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act()
     {
         //If user selects "Start", they will be sent to the store
