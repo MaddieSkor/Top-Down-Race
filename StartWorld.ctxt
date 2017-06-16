@@ -6,11 +6,7 @@ comment1.target=StartWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ StartWorld.\r\n\ \r\n
 comment2.params=scoreIn
 comment2.target=StartWorld(int)
-<<<<<<< HEAD
 comment2.text=\r\n\ Constructor\ for\ StartWorld\r\n\ @param\ scoreIn\ score\ to\ be\ carried\ through\ to\ store\ screen\r\n
-=======
-comment2.text=\r\n\ Constructot\ for\ objects\ of\ class\ StartWorld\r\n\ @param\ score\ from\ the\ previous\ round\ to\ be\ carried\ through\ to\ the\ store\r\n
->>>>>>> origin/master
 comment3.params=
 comment3.target=void\ act()
 comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ StartWorld\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

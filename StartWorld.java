@@ -40,19 +40,11 @@ public class StartWorld extends BaseWorld
         setBackground(new GreenfootImage("sandstone.jpg"));
     }
     
-<<<<<<< HEAD
     /**
      * Constructor for StartWorld
      * @param scoreIn score to be carried through to store screen
      */
     public StartWorld(int scoreIn)
-=======
-   /**
-    * Constructot for objects of class StartWorld
-    * @param score from the previous round to be carried through to the store
-    */
-   public StartWorld(int scoreIn)
->>>>>>> origin/master
     {   
         //sets score equal to the input score
         score = scoreIn;
