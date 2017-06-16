@@ -3,18 +3,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Powerup here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Connor Brunt
+ * @version 1.0
  */
 public class Powerup extends Actor
 {
+    //variable declaration
     int imgSize = 30;
     int randNum;
     int points;
     boolean generated = false;
     Text text;
+    /**
+     * generates a blank powerup
+     */
     public Powerup()
     {
+        //sets the image to a white circle with a black border
         GreenfootImage image = new GreenfootImage(imgSize, imgSize);
         image.drawOval(0, 0, imgSize, imgSize);
         image.setColor(Color.BLACK);
@@ -30,6 +35,7 @@ public class Powerup extends Actor
      */
     public void act() 
     {
+        //adds a 3, 5, or 7 point value to the powerup
         if (!generated){
             randNum = Greenfoot.getRandomNumber(3);
             if (randNum == 0){
@@ -47,11 +53,17 @@ public class Powerup extends Actor
         }
     }    
     
+    /**
+     * @return the amount of points that the powerup is worth
+     */
     public int getPoints()
     {
         return points;
     }
     
+    /**
+     * Removes the powerup
+     */
     public void remove()
     {
         getWorld().removeObject(text);
