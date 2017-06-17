@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GameWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ GameWorld\ here.\r\n\ \r\n\ @author\ Connor\ Brunt\r\n\ @author\ Madison\ Skorbinsky\r\n\ @version\ 1.0\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ GameWorld\ here.\r\n\ \r\n\ @author\ Connor\ Brunt\r\n\ @author\ Madison\ Skorbinski\r\n\ @version\ 1.0\r\n
 comment1.params=numberOfPlayers\ carNumber
 comment1.target=GameWorld(int,\ int)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GameWorld.\r\n\ @param\ numberOfPlayers\ the\ number\ of\ palyers\ in\ the\ game\r\n\ @param\ carNumber\ the\ car\ type\ to\ be\ used\ for\ the\ cars\ in\ the\ game\r\n

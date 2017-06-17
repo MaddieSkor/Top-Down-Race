@@ -3,15 +3,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class EndWorld here.
  * 
- * @author Maddy Thompson
- * @author Madison Skorbinsky
+ * @author Maddy Thomson
+ * @author Madison Skorbinski
  * @version 1.0
  */
 public class EndWorld extends BaseWorld
 {
-    //Global Variables
+    //List of all buttons used in this world
     private Button returnToStartButton;
     private Button returnToStoreButton;
+    
+    //Global Variables
     public int score;
     public int finalScore;
     public boolean player2;
@@ -56,6 +58,7 @@ public class EndWorld extends BaseWorld
             Text messageText2 = new Text("Player 2 Score: " + score2);
             addObject( messageText2, 300, 60);
         }
+        
         //displays high scores
         int[] scores = highscores.getScores();
         for (int i=0; i<scores.length; i++){

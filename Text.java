@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Text here.
+ * This class creates text based on different user inputs to be displayed at different points in the game
  * 
- * @author Madison Skorbinsky
- * @author Maddy Thompson
+ * @author Madison Skorbinski
+ * @author Maddy Thomson
  * @version 1.0
  */
 public class Text extends Actor

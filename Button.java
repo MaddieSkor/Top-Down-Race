@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Button here.
+ * This class uses different user inputs to create buttons at different points in teh game
  * 
  * @author Madison Skorbinski
  * @author Maddy Thomson
@@ -9,9 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Button extends Text
 {
-    //variable declaration
+    //Global Variables
     private String  buttonKey;
     private boolean clicked;
+    
     /**
      * Generates a button with text
      * @param buttonText text to be displayed
@@ -36,6 +37,7 @@ public class Button extends Text
         super(buttonText);
         
         this.buttonKey  = buttonKey;
+        
         //sets car image depending on car number input
         if(carNumber == 1){
             setImage("redcar.png");

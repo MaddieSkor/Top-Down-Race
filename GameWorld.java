@@ -7,7 +7,7 @@ import java.util.Arrays;
  * Write a description of class GameWorld here.
  * 
  * @author Connor Brunt
- * @author Madison Skorbinsky
+ * @author Madison Skorbinski
  * @version 1.0
  */
 public class GameWorld extends BaseWorld

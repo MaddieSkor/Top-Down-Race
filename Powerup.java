@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Powerup here.
+ * The powerup appears randomly on the screen, and displays the amount of points it is worth inside of an oval shape.
  * 
  * @author Connor Brunt
  * @version 1.0
