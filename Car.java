@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Car here.
+ * This is the car class, the user has control of their car and can move forwards, brake, and turn.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Maddie Skorbinski) 
+ * @author (Connor Brunt)
  */
 public class Car extends Actor
 {

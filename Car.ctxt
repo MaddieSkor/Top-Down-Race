@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Car
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Car\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ is\ the\ car\ class,\ the\ user\ has\ control\ of\ their\ car\ and\ can\ move\ forwards,\ brake,\ and\ turn.\r\n\ \r\n\ @author\ (Maddie\ Skorbinski)\ \r\n\ @author\ (Connor\ Brunt)\r\n
 comment1.params=forwardKey\ backKey\ leftKey\ rightKey\ carNumber
 comment1.target=Car(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
 comment2.params=

@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Text here.
+ * This class designs all the text used in the game.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Madison Skorbinski) 
  */
 public class Text extends Actor
 {
@@ -17,7 +16,7 @@ public class Text extends Actor
     public Text(String text, int sizeIn, boolean background) {
         setText(text, sizeIn, background);
     }
-
+    //setting text for worlds
     public void setText(String text) {
         if (this.text != text) {
             this.text = text;

@@ -4,10 +4,9 @@ import java.util.Arrays;
 
 
 /**
- * Write a description of class GameWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The user can race around a randomly generated track.
+ *
+ * @author (Connor Brunt) 
  */
 public class GameWorld extends BaseWorld
 {
@@ -38,10 +37,12 @@ public class GameWorld extends BaseWorld
         makeTrack();
         score1 = 0;
         score2 = 0;
+        //Adding Controls for the cars
          if(numberOfPlayers == 1){
             car = new Car("w", "s", "a", "d", carNumber);
             addObject(car, 100, 180);
         }
+        //Controls for the second car if activated
         if (numberOfPlayers == 2){
             car = new Car("w", "s", "a", "d", 1);
             addObject(car, 80, 180);

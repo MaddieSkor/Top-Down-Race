@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BaseWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * B
+ * @author (Madison Skorbinski) 
  */
 public class BaseWorld extends World
 {
 
     /**
-     * Constructor for objects of class BaseWorld.
+     * Constructor f
+     * or objects of class BaseWorld.
      * 
+     * setting parameters for all the worlds
      */
     public BaseWorld()
     {    

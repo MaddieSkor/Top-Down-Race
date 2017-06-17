@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class EndWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Here the player can check their score for the current game as well as their high scores from previous games. I can also take the user back to the main screen or shop.
+ *
+ * @author (Maddy Thomson) 
+ * @author (Madison Skorbinski) 
  */
 public class EndWorld extends BaseWorld
 {
