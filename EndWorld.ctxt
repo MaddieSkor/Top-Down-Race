@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=EndWorld
-comment0.text=\r\n<<<<<<<\ HEAD\r\n\ Here\ the\ player\ can\ check\ their\ score\ for\ the\ current\ game\ as\ well\ as\ their\ high\ scores\ from\ previous\ games.\ I\ can\ also\ take\ the\ user\ back\ to\ the\ main\ screen\ or\ shop.\r\n\r\n\ @author\ (Maddy\ Thomson)\ \r\n\ @author\ (Madison\ Skorbinski)\ \r\n\=\=\=\=\=\=\=\r\n\ Write\ a\ description\ of\ class\ EndWorld\ here.\r\n\ \r\n\ @author\ Maddy\ Thomson\r\n\ @author\ Madison\ Skorbinski\r\n\ @version\ 1.0\r\n>>>>>>>\ origin/master\r\n
+comment0.text=\r\n\ Here\ the\ player\ can\ check\ their\ score\ for\ the\ current\ game\ as\ well\ as\ their\ high\ scores\ from\ previous\ games.\ I\ can\ also\ take\ the\ user\ back\ to\ the\ main\ screen\ or\ shop.\r\n\r\n\ @author\ Maddy\ Thomson\r\n\ @author\ Madison\ Skorbinski\r\n\ @version\ 1.0\r\n
 comment1.params=score\ score2
 comment1.target=EndWorld(java.lang.Integer,\ java.lang.Integer)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ EndWorld.\r\n\ @param\ score\ The\ first\ score\ to\ be\ displayed\r\n\ @param\ score2\ The\ second\ score\ (if\ any)\ to\ be\ displayed\r\n

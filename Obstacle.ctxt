@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Obstacle
-comment0.text=\r\n\ Obstacles\ appear\ as\ a\ bomb\ randomly\ on\ the\ track\r\n\ \r\n<<<<<<<\ HEAD\r\n\ @author\ (Connor\ Brunt)\ \r\n\=\=\=\=\=\=\=\r\n\ @author\ Connor\ Brunt\ \r\n\ @version\ 1.0\r\n>>>>>>>\ origin/master\r\n
+comment0.text=\r\n\ Obstacles\ appear\ as\ a\ bomb\ randomly\ on\ the\ track\r\n\ \r\n\ @author\ Connor\ Brunt\ \r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=Obstacle()
 comment1.text=\r\n\ Generates\ an\ obstacle\ with\ a\ bomb\ image\ for\ the\ cars\ to\ avoid\r\n

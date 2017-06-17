@@ -1,17 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
-<<<<<<< HEAD
- * Class for all buttons, extends basic text
- * 
- * @author (Maddison Skorbinski) 
-=======
- * This class uses different user inputs to create buttons at different points in teh game
+ * This class uses different user inputs to create buttons at different points in the game
  * 
  * @author Madison Skorbinski
  * @author Maddy Thomson
  * @version 1.0
->>>>>>> origin/master
  */
 public class Button extends Text
 {

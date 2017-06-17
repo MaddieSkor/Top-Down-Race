@@ -2,7 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Base class for all game worlds
- * @author (Madison Skorbinski) 
+ * 
+ * @author Madison Skorbinski
+ * @version 1.0
  */
 public class BaseWorld extends World
 {

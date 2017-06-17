@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Button
-comment0.text=\r\n<<<<<<<\ HEAD\r\n\ Class\ for\ all\ buttons,\ extends\ basic\ text\r\n\ \r\n\ @author\ (Maddison\ Skorbinski)\ \r\n\=\=\=\=\=\=\=\r\n\ This\ class\ uses\ different\ user\ inputs\ to\ create\ buttons\ at\ different\ points\ in\ teh\ game\r\n\ \r\n\ @author\ Madison\ Skorbinski\r\n\ @author\ Maddy\ Thomson\r\n\ @version\ 1.0\r\n>>>>>>>\ origin/master\r\n
+comment0.text=\r\n\ This\ class\ uses\ different\ user\ inputs\ to\ create\ buttons\ at\ different\ points\ in\ the\ game\r\n\ \r\n\ @author\ Madison\ Skorbinski\r\n\ @author\ Maddy\ Thomson\r\n\ @version\ 1.0\r\n
 comment1.params=buttonText\ buttonKey
 comment1.target=Button(java.lang.String,\ java.lang.String)
 comment1.text=\r\n\ Generates\ a\ button\ with\ text\r\n\ @param\ buttonText\ text\ to\ be\ displayed\r\n\ @param\ buttonKey\ key\ that\ activates\ button\r\n

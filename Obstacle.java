@@ -3,12 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Obstacles appear as a bomb randomly on the track
  * 
-<<<<<<< HEAD
- * @author (Connor Brunt) 
-=======
  * @author Connor Brunt 
  * @version 1.0
->>>>>>> origin/master
  */
 public class Obstacle extends Actor
 {
