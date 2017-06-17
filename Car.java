@@ -1,15 +1,39 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This is the car class, the user has control of their car and can move forwards, brake, and turn.
+ * The car is user controlled by the input keys.  There are different images that can be used for this actor.
+ * There are also sound effects and multiple interactions with other actors on the screen.
  * 
- * @author (Maddie Skorbinski) 
- * @author (Connor Brunt)
+ * @author Madison Skorbinski
+ * @author Connor Brunt
+ * @author Maddy Thomson
+ * @version 1.0
  */
 public class Car extends Actor
 {
-      public Car(String forwardKey, String backKey, String leftKey, String rightKey, int carNumber)
+    //Global Variables
+    GameWorld currentWorld;
+    public GreenfootSound explode;
+    public GreenfootSound powerup;
+    public GreenfootSound accelerate;
+    public GreenfootSound brake;
+    public double currentTime = -1;
+    public boolean destroyed = false;
+    public boolean generated = false;
+    public int i = 0;
+    public int rotation;
+    private String forwardKey;
+    private String backKey;
+    private String leftKey;
+    private String rightKey;
+    private double speed = 1;
+    public int imgWidth;
+    public int score;
+    private boolean out;
+    
+    public Car(String forwardKey, String backKey, String leftKey, String rightKey, int carNumber)
     {
+        //variable initialization;
         this.forwardKey = forwardKey;
         this.backKey = backKey;
         this.leftKey = leftKey;
@@ -17,11 +41,13 @@ public class Car extends Actor
         this.speed = 1;
         this.score = 0;
         this.out = false;
-        
+
+        //generates sounds
         accelerate = new GreenfootSound("accelerate.wav");
         brake = new GreenfootSound("brake.wav");
         explode = new GreenfootSound("Explosion.wav");
         powerup = new GreenfootSound("Powerup.wav");
+        
         //changes car image to match the car that was chosen at the store
         if(carNumber == 1){
             setImage("redcar.png");
@@ -64,6 +90,7 @@ public class Car extends Actor
             getImage().scale(75, 40);
         }
         
+        //scales the image and rotates the actor to the correct starting direction
         GreenfootImage currentImage = getImage();
         currentImage.scale((int)(currentImage.getWidth()*0.5), (int)(currentImage.getHeight()*0.5));
         setImage(currentImage);
@@ -79,10 +106,12 @@ public class Car extends Actor
         super.act();
         
         currentWorld = (GameWorld)getWorld();
-        //move 
+        
+        //variable initialization 
         final double MAX_SPEED    = 4.0;
         final double SPEED_CHANGE = 0.05;
-
+        
+        //accelerates the car and palys acceleration sound
         if (Greenfoot.isKeyDown(this.forwardKey)) {
             speed += SPEED_CHANGE;
             if (!accelerate.isPlaying()){
@@ -98,7 +127,8 @@ public class Car extends Actor
                 accelerate.stop();
             }
         }
-
+        
+        //decelerates the car and plays braking sound
         if (Greenfoot.isKeyDown(this.backKey)) {
             speed -= SPEED_CHANGE;
             if (!brake.isPlaying()){
@@ -115,14 +145,15 @@ public class Car extends Actor
             }
         }
         
-        //turn 
+        //turn the car left or right
         if (Greenfoot.isKeyDown(this.leftKey)) {
             turn(-7);
         }
-        
         if (Greenfoot.isKeyDown(this.rightKey)) {
             turn(7);
         } 
+
+        //stops the car for 3 seconds at the beginning for the countdown
         if (!generated){
             if (currentTime == -1){
                 currentTime = currentWorld.getTime();
@@ -136,11 +167,16 @@ public class Car extends Actor
                 generated = true;
             }
         }
+       
+        //move
         move((int)speed);
+        
+        //increases score
         if (generated){
             this.score++;
         }
         
+        //if car hits a bomb or runs off track, destroy it
         if ((getOneIntersectingObject(Obstacle.class) != null || getOneIntersectingObject(Track.class) == null) && !destroyed){
             destroyed = true;
             currentTime = currentWorld.getTime();
@@ -148,7 +184,8 @@ public class Car extends Actor
             explode.play();
             accelerate.setVolume(0);
         }
-        
+       
+        //if the car is destroyed, set image to explosion and play explosion noise
         if (destroyed){
             imgWidth = getImage().getWidth();
             GreenfootImage explosion = new GreenfootImage("explosion.png");
@@ -156,6 +193,7 @@ public class Car extends Actor
             setImage(explosion);
             speed = 0;
             setRotation(rotation);
+            //remove destroyed car after 0.5s
             if (currentWorld.getTime() - currentTime > 30){
                 this.out = true;
                 brake.stop();
@@ -165,10 +203,12 @@ public class Car extends Actor
             }
         }
         
+        //option to manually remove the car
         if (Greenfoot.isKeyDown("r")) {
             this.out = true;
         } 
         
+        //if the car is still in the world, add powerup score when it hits one
         if (getWorld() != null){
             if (getOneIntersectingObject(Powerup.class) != null){
                 powerup.play();
@@ -178,26 +218,10 @@ public class Car extends Actor
             }
         }
     } 
-    
+    /**
+     * @return whether or not the car is "out" (not in the world)
+     */
     public  boolean isOut(){
         return this.out;
     }
-    GameWorld currentWorld;
-    public GreenfootSound explode;
-    public GreenfootSound powerup;
-    public GreenfootSound accelerate;
-    public GreenfootSound brake;
-    public double currentTime = -1;
-    public boolean destroyed = false;
-    public boolean generated = false;
-    public int i = 0;
-    public int rotation;
-    private String forwardKey;
-    private String backKey;
-    private String leftKey;
-    private String rightKey;
-    private double speed = 1;
-    public int imgWidth;
-    public  int    score;
-    private boolean out;
 }

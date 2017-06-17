@@ -1,14 +1,19 @@
 #BlueJ class context
 comment0.target=HighScores
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ HighScores\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ HighScores\ here.\r\n\ \r\n\ @author\ Madison\ Skorbinsky\r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=HighScores()
+comment1.text=\r\n\ constructor\ for\ highscores\ class,\ generates\ high\ score\ list\r\n
 comment2.params=score
 comment2.target=void\ addScore(int)
+comment2.text=\r\n\ Adds\ scores\ to\ highscore\ list\r\n\ @param\ score\ score\ amount\ to\ be\ added\ to\ list\r\n
 comment3.params=
 comment3.target=int[]\ getScores()
+comment3.text=\r\n\ @return\ the\ high\ score\ list\r\n
 comment4.params=
 comment4.target=void\ load()
+comment4.text=\r\n\ loads\ highscores\ from\ text\ file\r\n
 comment5.params=
 comment5.target=void\ save()
+comment5.text=\r\n\ saves\ highscores\ to\ text\ file\r\n
 numComments=6

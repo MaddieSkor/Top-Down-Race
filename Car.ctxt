@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Car
-comment0.text=\r\n\ This\ is\ the\ car\ class,\ the\ user\ has\ control\ of\ their\ car\ and\ can\ move\ forwards,\ brake,\ and\ turn.\r\n\ \r\n\ @author\ (Maddie\ Skorbinski)\ \r\n\ @author\ (Connor\ Brunt)\r\n
+comment0.text=\r\n\ The\ car\ is\ user\ controlled\ by\ the\ input\ keys.\ \ There\ are\ different\ images\ that\ can\ be\ used\ for\ this\ actor.\r\n\ There\ are\ also\ sound\ effects\ and\ multiple\ interactions\ with\ other\ actors\ on\ the\ screen.\r\n\ \r\n\ @author\ Madison\ Skorbinski\r\n\ @author\ Connor\ Brunt\r\n\ @author\ Maddy\ Thomson\r\n\ @version\ 1.0\r\n
 comment1.params=forwardKey\ backKey\ leftKey\ rightKey\ carNumber
 comment1.target=Car(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
 comment2.params=
@@ -8,4 +8,5 @@ comment2.target=void\ act()
 comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Car\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment3.params=
 comment3.target=boolean\ isOut()
+comment3.text=\r\n\ @return\ whether\ or\ not\ the\ car\ is\ "out"\ (not\ in\ the\ world)\r\n
 numComments=4

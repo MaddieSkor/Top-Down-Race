@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=Text
-comment0.text=\r\n\ This\ class\ designs\ all\ the\ text\ used\ in\ the\ game.\r\n\ \r\n\ @author\ (Madison\ Skorbinski)\ \r\n
+comment0.text=\r\n\ This\ class\ creates\ text\ based\ on\ different\ user\ inputs\ to\ be\ displayed\ at\ different\ points\ in\ the\ game\r\n\ \r\n\ @author\ Madison\ Skorbinski\r\n\ @author\ Maddy\ Thomson\r\n\ @version\ 1.0\r\n
 comment1.params=text
 comment1.target=Text(java.lang.String)
+comment1.text=\r\n\ sets\ text\ to\ input\ string\r\n\ @param\ text\ string\ to\ set\ text\ to\r\n
 comment2.params=text\ sizeIn\ background
 comment2.target=Text(java.lang.String,\ int,\ boolean)
+comment2.text=\r\n\ sets\ text\ to\ specified\ string,\ along\ with\ specified\ size\ and\ background\r\n\ @param\ text\ string\ to\ set\ text\ to\r\n\ @param\ sizeIn\ size\ of\ text\r\n\ @param\ background\ whether\ or\ not\ the\ text\ has\ a\ background\r\n
 comment3.params=text
 comment3.target=void\ setText(java.lang.String)
+comment3.text=\r\n\ sets\ the\ text\ to\ a\ specified\ string\ once\r\n\ @param\ text\ string\ for\ text\ to\ be\ set\ to\r\n
 comment4.params=text\ sizeIn\ background
 comment4.target=void\ setText(java.lang.String,\ int,\ boolean)
+comment4.text=\r\n\ sets\ the\ text\ to\ the\ specified\ string,\ size,\ and\ background\ once\r\n\ @param\ text\ string\ to\ set\ text\ to\r\n\ @param\ sizeIn\ size\ of\ text\r\n\ @param\ background\ whether\ or\ not\ the\ text\ has\ a\ background\r\n
 numComments=5

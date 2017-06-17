@@ -1,13 +1,16 @@
 #BlueJ class context
 comment0.target=Powerup
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Powerup\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ The\ powerup\ appears\ randomly\ on\ the\ screen,\ and\ displays\ the\ amount\ of\ points\ it\ is\ worth\ inside\ of\ an\ oval\ shape.\r\n\ \r\n\ @author\ Connor\ Brunt\r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=Powerup()
+comment1.text=\r\n\ generates\ a\ blank\ powerup\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Powerup\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment3.params=
 comment3.target=int\ getPoints()
+comment3.text=\r\n\ @return\ the\ amount\ of\ points\ that\ the\ powerup\ is\ worth\r\n
 comment4.params=
 comment4.target=void\ remove()
+comment4.text=\r\n\ Removes\ the\ powerup\r\n
 numComments=5

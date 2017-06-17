@@ -1,7 +1,7 @@
 #Greenfoot properties
-#Fri Jun 16 15:14:21 EDT 2017
+#Fri Jun 16 21:43:47 EDT 2017
 target2.width=80
-editor.fx.0.height=0
+editor.fx.0.height=739
 target8.name=Car
 target11.y=0
 target11.x=0
@@ -84,8 +84,8 @@ dependency27.to=HighScores
 dependency21.from=Car
 target11.type=ClassTarget
 version=3.0.0
-editor.fx.0.y=0
-editor.fx.0.x=0
+editor.fx.0.y=-4
+editor.fx.0.x=275
 dependency15.from=GameWorld
 dependency6.to=GameWorld
 target2.showInterface=false
@@ -112,7 +112,7 @@ dependency23.to=Button
 target12.y=0
 target12.x=0
 dependency10.type=UsesDependency
-editor.fx.0.width=0
+editor.fx.0.width=816
 class.StartWorld.image=board.jpg
 target11.showInterface=false
 dependency20.type=UsesDependency

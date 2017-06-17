@@ -3,7 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * In this world, the user has an option to use the points that they have earned in the game to purchase new cars with different features.
  * 
- * @author (Maddy Thomson) 
+ * @author Maddy Thomson 
+ * @version 1.0
  */
 public class StoreWorld extends BaseWorld
 {
@@ -25,7 +26,7 @@ public class StoreWorld extends BaseWorld
     
     /**
      * Constructor for objects of class StoreWorld.
-     * 
+     * @param score from the previous round, used to make purchases
      */
     public StoreWorld(int scoreIn)
     {
@@ -103,6 +104,10 @@ public class StoreWorld extends BaseWorld
         addObject(scoreText, 300, 425);  
     }
     
+    /**
+     * Act - do whatever the StoreWorld wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act(){
         //when a car is clicked, it send the user to the game world using the car that they chose if they have enough points
         if(redCar.getClicked()){
